@@ -56,16 +56,10 @@ st.markdown("""
 # Load data function
 @st.cache_data
 def load_data():
-    # To use your actual data, replace this function with:
-    # return pd.read_csv('cleaned_data.csv')
-    
     np.random.seed(42)
     n_games = 8000
-    release_probs = np.array([0.03]*5 + [0.05]*5 + [0.08]*5)
-    release_probs = release_probs / release_probs.sum()
-    release_years = np.random.choice(range(2010, 2025), n_games, p=release_probs)
-
     
+    release_years = np.random.choice(range(2010, 2025), n_games, p=[0.03]*5 + [0.05]*5 + [0.08]*5)
     is_indie = np.random.choice([True, False], n_games, p=[0.72, 0.28])
     
     df = pd.DataFrame({
@@ -140,13 +134,6 @@ platform_filter = st.sidebar.multiselect(
     options=[1, 2, 3],
     default=[1, 2, 3]
 )
-
-st.sidebar.markdown("---")
-st.sidebar.markdown("### 📊 About")
-st.sidebar.info("""
-This dashboard provides interactive analysis of Steam games market data.
-Use the filters above to explore different segments and trends.
-""")
 
 # Apply filters
 filtered_df = df[
@@ -239,18 +226,6 @@ with tab1:
                  color_discrete_map={'Indie': '#FF6B6B', 'Non-Indie': '#4ECDC4'})
     fig3.update_layout(height=400)
     st.plotly_chart(fig3, use_container_width=True)
-    
-    # Additional insights
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        total_revenue = filtered_df['EstimatedProfit'].sum()
-        st.metric("💵 Total Est. Revenue", f"${total_revenue/1e9:.2f}B")
-    with col2:
-        avg_owners = filtered_df['Estimated owners'].mean()
-        st.metric("👥 Avg Owners", f"{avg_owners:,.0f}")
-    with col3:
-        avg_ccu = filtered_df['Peak CCU'].mean()
-        st.metric("🔥 Avg Peak CCU", f"{avg_ccu:,.0f}")
 
 # TAB 2: Pricing Strategy
 with tab2:
@@ -268,7 +243,7 @@ with tab2:
                                        marker_color=color, nbinsx=30))
         fig4.update_layout(title='💵 Price Distribution (Paid Games)',
                           xaxis_title='Price (USD)', yaxis_title='Count',
-                          barmode='overlay', height=400, hovermode='x')
+                          barmode='overlay', height=400)
         st.plotly_chart(fig4, use_container_width=True)
     
     with col2:
@@ -324,23 +299,6 @@ with tab2:
                           xaxis_title='Price Band', yaxis_title='Profit Per Game (USD)',
                           height=400)
         st.plotly_chart(fig7, use_container_width=True)
-    
-    # Free vs Paid comparison
-    st.markdown("### 🆓 Free vs Paid Games")
-    free_paid = filtered_df.groupby('is_free').agg({
-        'Steam Score': 'mean',
-        'Estimated owners': 'median',
-        'Name': 'count'
-    }).reset_index()
-    free_paid['Type'] = free_paid['is_free'].map({True: 'Free', False: 'Paid'})
-    
-    fig8 = make_subplots(rows=1, cols=2, subplot_titles=('Success Rate', 'Median Owners'))
-    fig8.add_trace(go.Bar(x=free_paid['Type'], y=free_paid['Steam Score'], 
-                          marker_color=['#e74c3c', '#2ecc71'], name='Steam Score'), row=1, col=1)
-    fig8.add_trace(go.Bar(x=free_paid['Type'], y=free_paid['Estimated owners'],
-                          marker_color=['#e74c3c', '#2ecc71'], name='Owners', showlegend=False), row=1, col=2)
-    fig8.update_layout(height=400, showlegend=False)
-    st.plotly_chart(fig8, use_container_width=True)
 
 # TAB 3: Success Factors
 with tab3:
@@ -357,66 +315,64 @@ with tab3:
             'EstimatedProfit': 'median'
         }).reset_index()
         
-        fig9 = go.Figure()
-        fig9.add_trace(go.Bar(x=platform_success['platform_count'], 
+        fig8 = go.Figure()
+        fig8.add_trace(go.Bar(x=platform_success['platform_count'], 
                              y=platform_success['Steam Score'],
                              name='Success Rate',
                              marker_color=['#e74c3c', '#f39c12', '#2ecc71'],
                              text=platform_success['Steam Score'].apply(lambda x: f'{x:.1f}%'),
                              textposition='outside'))
-        fig9.update_layout(title='💻 Success by Platform Count',
+        fig8.update_layout(title='💻 Success by Platform Count',
                           xaxis_title='Number of Platforms',
                           yaxis_title='Success Rate (%)',
                           height=400)
-        st.plotly_chart(fig9, use_container_width=True)
+        st.plotly_chart(fig8, use_container_width=True)
     
     with col2:
         # DLC impact
-        indie_games_copy = indie_games.copy()
-        indie_games_copy['dlc_bracket'] = pd.cut(indie_games_copy['DLC count'],
+        indie_games['dlc_bracket'] = pd.cut(indie_games['DLC count'],
                                            bins=[-1, 0, 1, 2, 3, 5, 100],
                                            labels=['None', '1', '2', '3', '4-5', '5+'])
-        dlc_profit = indie_games_copy.groupby('dlc_bracket').agg({
+        dlc_profit = indie_games.groupby('dlc_bracket').agg({
             'EstimatedProfit': 'median',
             'Name': 'count'
         }).reset_index()
         dlc_profit = dlc_profit[dlc_profit['Name'] >= 20]
         
-        fig10 = go.Figure(go.Bar(
+        fig9 = go.Figure(go.Bar(
             x=dlc_profit['dlc_bracket'],
             y=dlc_profit['EstimatedProfit'],
             marker_color='#f39c12',
             text=dlc_profit['EstimatedProfit'].apply(lambda x: f'${x:,.0f}'),
             textposition='outside'
         ))
-        fig10.update_layout(title='🎁 Profit by DLC Strategy',
+        fig9.update_layout(title='🎁 Profit by DLC Strategy',
                           xaxis_title='Number of DLCs',
                           yaxis_title='Median Profit (USD)',
                           height=400)
-        st.plotly_chart(fig10, use_container_width=True)
+        st.plotly_chart(fig9, use_container_width=True)
     
     # Achievements
     st.markdown("### 🏆 Achievement Impact")
     col1, col2 = st.columns(2)
     
     with col1:
-        indie_games_copy2 = indie_games.copy()
-        indie_games_copy2['achievement_bracket'] = pd.cut(indie_games_copy2['Achievements'],
+        indie_games['achievement_bracket'] = pd.cut(indie_games['Achievements'],
                                                    bins=[0, 1, 10, 20, 50, 100, 1000],
                                                    labels=['None', '1-10', '10-20', '20-50', '50-100', '100+'])
-        achievement_success = indie_games_copy2.groupby('achievement_bracket').agg({
+        achievement_success = indie_games.groupby('achievement_bracket').agg({
             'Steam Score': lambda x: ((x >= 0.7).sum() / len(x) * 100),
             'Name': 'count'
         }).reset_index()
         achievement_success = achievement_success[achievement_success['Name'] >= 50]
         
-        fig11 = px.bar(achievement_success, x='achievement_bracket', y='Steam Score',
+        fig10 = px.bar(achievement_success, x='achievement_bracket', y='Steam Score',
                       title='Achievement Count vs Success Rate',
                       labels={'Steam Score': 'Success Rate (%)', 'achievement_bracket': 'Achievements'},
                       color='Steam Score',
                       color_continuous_scale='viridis')
-        fig11.update_layout(height=400)
-        st.plotly_chart(fig11, use_container_width=True)
+        fig10.update_layout(height=400)
+        st.plotly_chart(fig10, use_container_width=True)
     
     with col2:
         # Release month timing
@@ -430,33 +386,12 @@ with tab3:
         
         colors = ['#2ecc71' if m not in [6,7,8,11,12] else '#e74c3c' 
                  for m in monthly_success['release_month']]
-        fig12 = go.Figure(go.Bar(x=monthly_success['month_name'], y=monthly_success['Steam Score'],
+        fig11 = go.Figure(go.Bar(x=monthly_success['month_name'], y=monthly_success['Steam Score'],
                                 marker_color=colors))
-        fig12.update_layout(title='📅 Best Release Months',
+        fig11.update_layout(title='📅 Best Release Months',
                            xaxis_title='Month', yaxis_title='Success Rate (%)',
                            height=400)
-        st.plotly_chart(fig12, use_container_width=True)
-    
-    # Reviews impact
-    st.markdown("### 💬 Review Volume Impact")
-    indie_games_copy3 = indie_games.copy()
-    indie_games_copy3['review_bracket'] = pd.cut(indie_games_copy3['total_reviews'],
-                                       bins=[0, 10, 50, 100, 500, 1000, 100000],
-                                       labels=['0-10', '10-50', '50-100', '100-500', '500-1k', '1k+'])
-    review_impact = indie_games_copy3.groupby('review_bracket').agg({
-        'Steam Score': lambda x: ((x >= 0.7).sum() / len(x) * 100),
-        'Name': 'count'
-    }).reset_index()
-    review_impact = review_impact[review_impact['Name'] >= 100]
-    
-    fig13 = go.Figure()
-    fig13.add_trace(go.Scatter(x=review_impact['review_bracket'], y=review_impact['Steam Score'],
-                              mode='lines+markers', line=dict(width=3, color='#e74c3c'),
-                              marker=dict(size=12), fill='tozeroy'))
-    fig13.update_layout(title='Success Rate by Review Volume',
-                       xaxis_title='Review Count', yaxis_title='Success Rate (%)',
-                       height=400)
-    st.plotly_chart(fig13, use_container_width=True)
+        st.plotly_chart(fig11, use_container_width=True)
 
 # TAB 4: Genre Analysis
 with tab4:
@@ -476,7 +411,7 @@ with tab4:
     col1, col2 = st.columns(2)
     
     with col1:
-        fig14 = go.Figure(go.Bar(
+        fig12 = go.Figure(go.Bar(
             y=genre_analysis['primary_genre'],
             x=genre_analysis['Steam Score'],
             orientation='h',
@@ -484,15 +419,15 @@ with tab4:
             text=genre_analysis['Steam Score'].apply(lambda x: f'{x:.1f}%'),
             textposition='outside'
         ))
-        fig14.update_layout(title='🎨 Genre Success Rates',
+        fig12.update_layout(title='🎨 Genre Success Rates',
                            xaxis_title='Success Rate (%)',
                            yaxis_title='Genre',
                            height=500)
-        st.plotly_chart(fig14, use_container_width=True)
+        st.plotly_chart(fig12, use_container_width=True)
     
     with col2:
         genre_profit = genre_analysis.sort_values('EstimatedProfit', ascending=True)
-        fig15 = go.Figure(go.Bar(
+        fig13 = go.Figure(go.Bar(
             y=genre_profit['primary_genre'],
             x=genre_profit['EstimatedProfit'],
             orientation='h',
@@ -500,11 +435,11 @@ with tab4:
             text=genre_profit['EstimatedProfit'].apply(lambda x: f'${x:,.0f}'),
             textposition='outside'
         ))
-        fig15.update_layout(title='💰 Genre Profitability',
+        fig13.update_layout(title='💰 Genre Profitability',
                            xaxis_title='Median Profit (USD)',
                            yaxis_title='Genre',
                            height=500)
-        st.plotly_chart(fig15, use_container_width=True)
+        st.plotly_chart(fig13, use_container_width=True)
     
     # Genre-Platform matrix
     st.markdown("### 🎮 Genre-Platform Success Matrix")
@@ -513,7 +448,7 @@ with tab4:
                                                 columns='platform_count', 
                                                 values='Steam Score')
     
-    fig16 = go.Figure(data=go.Heatmap(
+    fig14 = go.Figure(data=go.Heatmap(
         z=genre_platform_pivot.values,
         x=genre_platform_pivot.columns,
         y=genre_platform_pivot.index,
@@ -523,24 +458,11 @@ with tab4:
         textfont={"size": 10},
         colorbar=dict(title="Steam Score")
     ))
-    fig16.update_layout(title='Success Score by Genre and Platform Count',
+    fig14.update_layout(title='Success Score by Genre and Platform Count',
                        xaxis_title='Platform Count',
                        yaxis_title='Genre',
                        height=500)
-    st.plotly_chart(fig16, use_container_width=True)
-    
-    # Genre trends over time
-    st.markdown("### 📈 Genre Trends Over Time")
-    genre_time = filtered_df.groupby(['ReleaseYear', 'primary_genre']).size().reset_index(name='count')
-    top_genres = filtered_df['primary_genre'].value_counts().head(5).index
-    genre_time_filtered = genre_time[genre_time['primary_genre'].isin(top_genres)]
-    
-    fig17 = px.line(genre_time_filtered, x='ReleaseYear', y='count', color='primary_genre',
-                   title='Top 5 Genres: Release Trends',
-                   labels={'count': 'Number of Games', 'ReleaseYear': 'Year'})
-    fig17.update_traces(mode='lines+markers', line=dict(width=3))
-    fig17.update_layout(height=400, hovermode='x unified')
-    st.plotly_chart(fig17, use_container_width=True)
+    st.plotly_chart(fig14, use_container_width=True)
 
 # TAB 5: Deep Dive
 with tab5:
@@ -559,12 +481,12 @@ with tab5:
     with col3:
         color_by = st.selectbox("Color By", ['indie_status', 'primary_genre', 'platform_count'])
     
-    fig18 = px.scatter(filtered_df, x=x_axis, y=y_axis, color=color_by,
+    fig15 = px.scatter(filtered_df, x=x_axis, y=y_axis, color=color_by,
                       size='Estimated owners', hover_data=['Name', 'Price', 'Steam Score'],
                       title=f'{y_axis} vs {x_axis}',
                       opacity=0.6, height=600)
-    fig18.update_traces(marker=dict(line=dict(width=0.5, color='DarkSlateGrey')))
-    st.plotly_chart(fig18, use_container_width=True)
+    fig15.update_traces(marker=dict(line=dict(width=0.5, color='DarkSlateGrey')))
+    st.plotly_chart(fig15, use_container_width=True)
     
     # Correlation heatmap
     st.markdown("### 📊 Feature Correlation Matrix")
@@ -572,129 +494,100 @@ with tab5:
                    'DLC count', 'platform_count', 'Peak CCU', 'EstimatedProfit']
     corr_matrix = filtered_df[numeric_cols].corr()
     
-    fig19 = go.Figure(data=go.Heatmap(
+    fig16 = go.Figure(data=go.Heatmap(
         z=corr_matrix.values,
         x=corr_matrix.columns,
         y=corr_matrix.columns,
         colorscale='RdBu',
         zmid=0,
         text=np.round(corr_matrix.values, 2),
-            texttemplate='%{text}',
-    textfont={"size": 10},
-    colorbar=dict(title="Correlation")
-))
-fig19.update_layout(title='Correlation Matrix (Pearson)',
-                    height=600,
-                    autosize=True,
-                    margin=dict(l=40, r=40, t=80, b=40))
-st.plotly_chart(fig19, use_container_width=True)
-
-# Allow user to pick a game to inspect details
-st.markdown("### 🔎 Inspect a Game")
-game_list = filtered_df['Name'].sort_values().unique()
-selected_game = st.selectbox("Select a game to inspect", options=np.insert(game_list, 0, "None"))
-if selected_game and selected_game != "None":
-    game_row = filtered_df[filtered_df['Name'] == selected_game].iloc[0]
-    st.write("**Basic details**")
-    st.write({
-        "Name": game_row['Name'],
-        "Price": f"${game_row['Price']:.2f}",
-        "Indie": bool(game_row['indie']),
-        "Primary Genre": game_row['primary_genre'],
-        "Release Year": int(game_row['ReleaseYear']),
-        "Estimated Owners": int(game_row['Estimated owners']),
-        "Steam Score": f"{game_row['Steam Score']:.3f}",
-        "Estimated Profit": f"${int(game_row['EstimatedProfit']):,}"
-    })
-
-    # small sparkline for reviews (simulated because no timeseries)
-    st.markdown("**Review breakdown**")
-    st.progress(min(1.0, game_row['Positive'] / max(1, game_row['total_reviews'])))
-    st.write(f"Positive: {int(game_row['Positive'])} — Negative: {int(game_row['Negative'])}")
+        texttemplate='%{text}',
+        textfont={"size": 10},
+        colorbar=dict(title="Correlation")
+    ))
+    fig16.update_layout(title='Feature Correlation Heatmap', height=600)
+    st.plotly_chart(fig16, use_container_width=True)
+    
+    # Top performers table
+    st.markdown("### 🏆 Top Performing Games")
+    top_games = filtered_df.nlargest(20, 'EstimatedProfit')[
+        ['Name', 'Price', 'Estimated owners', 'Steam Score', 'EstimatedProfit', 
+         'indie_status', 'primary_genre']
+    ]
+    st.dataframe(top_games, use_container_width=True)
 
 # TAB 6: Insights Summary
 with tab6:
-    st.markdown('<p class="sub-header">Key Insights & Takeaways</p>', unsafe_allow_html=True)
-    insight_col1, insight_col2 = st.columns(2)
-    with insight_col1:
-        st.markdown('<div class="insight-box">', unsafe_allow_html=True)
-        st.markdown("### 🔥 Top Quick Insights")
-        # Insight 1: Best release years for success
-        success_by_year = filtered_df.groupby('ReleaseYear').agg({
-            'Steam Score': lambda x: ((x >= 0.7).sum() / len(x) * 100),
-            'Name': 'count'
-        }).reset_index()
-        best_year = success_by_year.sort_values('Steam Score', ascending=False).iloc[0]
-        st.write(f"- Highest success rate year: **{int(best_year['ReleaseYear'])}** ({best_year['Steam Score']:.1f}% success)")
-
-        # Insight 2: Best genre
-        if 'primary_genre' in filtered_df.columns and len(filtered_df) > 0:
-            genre_perf = filtered_df.groupby('primary_genre').agg({
-                'Steam Score': lambda x: ((x >= 0.7).sum() / len(x) * 100),
-                'EstimatedProfit': 'median',
-                'Name': 'count'
-            }).reset_index()
-            top_genre = genre_perf.sort_values('Steam Score', ascending=False).iloc[0]
-            st.write(f"- Top performing genre (success rate): **{top_genre['primary_genre']}** ({top_genre['Steam Score']:.1f}% success)")
-        st.markdown("</div>", unsafe_allow_html=True)
-
-        st.markdown('<div class="insight-box">', unsafe_allow_html=True)
-        st.markdown("### 💡 Pricing takeaways")
-        # Price bracket success
-        paid = filtered_df[filtered_df['is_free'] == False].copy()
-        if len(paid) > 0:
-            paid['price_bracket'] = pd.cut(paid['Price'],
-                                           bins=[0, 5, 10, 15, 20, 30, 50, 100],
-                                           labels=['$0-5', '$5-10', '$10-15', '$15-20', '$20-30', '$30-50', '$50+'])
-            pb = paid.groupby('price_bracket').agg({'Steam Score': 'mean', 'Name': 'count'}).reset_index()
-            best_bracket = pb.sort_values('Steam Score', ascending=False).iloc[0]
-            st.write(f"- Best avg Steam Score by price bracket: **{best_bracket['price_bracket']}** (avg score {best_bracket['Steam Score']:.3f})")
-        else:
-            st.write("- No paid games in the current filter.")
-        st.markdown("</div>", unsafe_allow_html=True)
-
-    with insight_col2:
-        st.markdown('<div class="insight-box">', unsafe_allow_html=True)
-        st.markdown("### 📈 Growth & Platform insights")
-        platform_counts = filtered_df.groupby('platform_count').agg({
-            'Name': 'count',
-            'EstimatedProfit': 'median'
-        }).reset_index()
-        most_platforms = platform_counts.sort_values('Name', ascending=False).iloc[0]
-        st.write(f"- Most common platform count: **{int(most_platforms['platform_count'])}** platforms (count {int(most_platforms['Name'])})")
-        st.write(f"- Median profit for that group: **${int(most_platforms['EstimatedProfit']):,}**")
-        st.markdown("</div>", unsafe_allow_html=True)
-
-        st.markdown('<div class="insight-box">', unsafe_allow_html=True)
-        st.markdown("### 🧭 Actionable Recommendations")
-        st.write("- Consider launching seasonal marketing around months with higher success rates.")
-        st.write("- For Indies: prioritize 1–2 platforms initially to reduce overhead while maximizing quality.")
-        st.write("- Use price brackets with historically higher average scores as a guide; pairing good post-launch support (DLCs/patches) increases longevity.")
-        st.markdown("</div>", unsafe_allow_html=True)
-
-    st.markdown("---")
-    st.markdown("### 📋 Top Games (by Estimated Profit)")
-    top_games = filtered_df.sort_values('EstimatedProfit', ascending=False).head(25)[[
-        'AppID', 'Name', 'Price', 'primary_genre', 'ReleaseYear', 'Estimated owners', 'EstimatedProfit', 'Steam Score'
-    ]].reset_index(drop=True)
-    # present a table
-    st.dataframe(top_games.style.format({
-        'Price': '${:.2f}',
-        'EstimatedProfit': '${:,.0f}',
-        'Steam Score': '{:.3f}'
-    }), height=400)
-
-    # Download filtered dataset
-    csv = filtered_df.to_csv(index=False).encode('utf-8')
-    st.download_button(
-        label="⬇️ Download filtered data (CSV)",
-        data=csv,
-        file_name='filtered_steam_games.csv',
-        mime='text/csv'
-    )
-
-# Footer
-st.markdown("---")
-st.markdown("""
-<p style="text-align:center; color: #888;">Built with ❤️ — Data simulated for demo purposes. Replace `load_data()` with your real dataset (e.g., `pd.read_csv('cleaned_data.csv')`) for production use.</p>
-""", unsafe_allow_html=True)
+    st.markdown('<p class="sub-header">🎯 Key Insights for Indie Developers</p>', unsafe_allow_html=True)
+    
+    indie_games = filtered_df[filtered_df['indie'] == True]
+    
+    # Calculate key metrics
+    insights_data = {
+        'price_10_15_success': indie_games[indie_games['Price'].between(10, 15)]['Steam Score'].mean(),
+        'price_20_30_success': indie_games[indie_games['Price'].between(20, 30)]['Steam Score'].mean(),
+        'multi_platform_success': indie_games[indie_games['platform_count'] >= 2]['Steam Score'].mean(),
+        'single_platform_success': indie_games[indie_games['platform_count'] == 1]['Steam Score'].mean(),
+        'dlc_3_profit': indie_games[indie_games['DLC count'] == 3]['EstimatedProfit'].median(),
+        'no_dlc_profit': indie_games[indie_games['DLC count'] == 0]['EstimatedProfit'].median(),
+    }
+    
+    # Insight cards
+    insights = [
+        {
+            'title': '💰 Optimal Pricing: $10-$15',
+            'description': f'Games priced between $10-15 show {insights_data["price_10_15_success"]:.1%} average success rate. For maximum profit, consider $40-50 range, but for reputation, aim for $20-30.',
+            'icon': '💵'
+        },
+        {
+            'title': '🎨 Best Genres: Simulation, Strategy, RPG',
+            'description': 'These genres consistently show the highest success rates and profitability among indie games. Focus your development efforts here.',
+            'icon': '🎮'
+        },
+        {
+            'title': '💻 Multi-Platform is Key',
+            'description': f'Supporting 2+ platforms increases success rate to {insights_data["multi_platform_success"]:.1%} vs {insights_data["single_platform_success"]:.1%} for single-platform games.',
+            'icon': '🖥️'
+        },
+        {
+            'title': '🏆 20-50 Achievements Sweet Spot',
+            'description': 'Games with 20-50 achievements show the best engagement and success rates. Too few feels incomplete, too many overwhelms players.',
+            'icon': '🎯'
+        },
+        {
+            'title': '📅 Avoid Summer Releases',
+            'description': 'Avoid June-July releases when AAA titles dominate. Best months are typically Feb-Apr and Sep-Oct.',
+            'icon': '🗓️'
+        },
+        {
+            'title': '🎁 Plan for ~3 DLCs',
+            'description': f'Games with 3 DLCs earn ${insights_data["dlc_3_profit"]:,.0f} median profit vs ${insights_data["no_dlc_profit"]:,.0f} without DLC.',
+            'icon': '📦'
+        },
+        {
+            'title': '🔄 Ongoing Support Matters',
+            'description': 'Games with regular updates and DLC support show significantly higher revenue and player retention.',
+            'icon': '🔧'
+        },
+        {
+            'title': '❌ Don\'t Go Free-to-Play',
+            'description': 'Paid indie games have much higher success rates and profitability compared to F2P models which require massive scale.',
+            'icon': '💸'
+        }
+    ]
+    
+    for i in range(0, len(insights), 2):
+        col1, col2 = st.columns(2)
+        with col1:
+            st.markdown(f"""
+            <div class="insight-box">
+                <h3>{insights[i]['icon']} {insights[i]['title']}</h3>
+                <p>{insights[i]['description']}</p>
+            </div>
+            """, unsafe_allow_html=True)
+        if i + 1 < len(insights):
+            with col2:
+                st.markdown(f"""
+                <div class="insight-box">
+                    <h3>{insights[i+1]['icon']} {insights[i+1]['title']}</h3>
+                    # <p>{{insights[i+1]['icon']} {insights[i+1]['title']}<p>""")
