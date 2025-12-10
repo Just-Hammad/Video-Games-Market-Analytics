@@ -2,3 +2,5 @@
 !.gitignore
 !*.ipynb 
 !*.py
+!*.html
+!*.txt
