@@ -20,115 +20,95 @@ st.markdown("""
 <style>
     /* Main background and text */
     .stApp {
-        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+        background: linear-gradient(135deg, #232946 0%, #121629 100%);
+        color: #F4F4F6;
     }
-    
-    /* Headers */
     h1 {
-        background: linear-gradient(90deg, #FF6B6B, #4ECDC4);
+        background: linear-gradient(90deg, #F9D923, #00A8CC);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        font-weight: 800 !important;
-        font-size: 2.8rem !important;
+        font-weight: 900 !important;
+        font-size: 3rem !important;
         text-align: center;
-        padding: 1rem 0;
+        padding: 1.2rem 0;
+        letter-spacing: 2px;
     }
-    
     h2 {
-        color: #4ECDC4 !important;
-        font-weight: 700 !important;
-        border-left: 4px solid #FF6B6B;
+        color: #00A8CC !important;
+        font-weight: 800 !important;
+        border-left: 4px solid #F9D923;
         padding-left: 1rem;
         margin-top: 2rem !important;
     }
-    
-    /* Card styling */
     .metric-card {
-        background: linear-gradient(145deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
-        border-radius: 16px;
+        background: linear-gradient(145deg, rgba(0,168,204,0.12), rgba(249,217,35,0.08));
+        border-radius: 18px;
         padding: 1.5rem;
-        border: 1px solid rgba(255,255,255,0.1);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        border: 1px solid rgba(255,255,255,0.08);
+        box-shadow: 0 6px 24px rgba(0,0,0,0.18);
         text-align: center;
     }
-    
     .metric-value {
-        font-size: 2.5rem;
-        font-weight: 800;
-        background: linear-gradient(90deg, #FF6B6B, #FFD93D);
+        font-size: 2.7rem;
+        font-weight: 900;
+        background: linear-gradient(90deg, #F9D923, #00A8CC);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
     }
-    
     .metric-label {
-        color: #a0a0a0;
-        font-size: 0.9rem;
+        color: #B8B8D1;
+        font-size: 1rem;
         text-transform: uppercase;
-        letter-spacing: 1px;
+        letter-spacing: 1.5px;
         margin-top: 0.5rem;
     }
-    
-    /* Insight cards */
     .insight-card {
-        background: linear-gradient(145deg, rgba(78, 205, 196, 0.15), rgba(78, 205, 196, 0.05));
-        border-radius: 12px;
+        background: linear-gradient(145deg, rgba(0,168,204,0.10), rgba(249,217,35,0.05));
+        border-radius: 14px;
         padding: 1rem 1.5rem;
-        border-left: 4px solid #4ECDC4;
+        border-left: 4px solid #00A8CC;
         margin: 1rem 0;
     }
-    
     .insight-card h4 {
-        color: #4ECDC4;
+        color: #F9D923;
         margin: 0 0 0.5rem 0;
     }
-    
     .insight-card p {
-        color: #e0e0e0;
+        color: #F4F4F6;
         margin: 0;
     }
-    
-    /* Radio buttons */
     .stRadio > div {
-        background: rgba(255,255,255,0.05);
+        background: rgba(0,168,204,0.08);
         border-radius: 12px;
         padding: 0.5rem 1rem;
     }
-    
-    /* Plotly charts container */
     .stPlotlyChart {
-        background: rgba(255,255,255,0.02);
-        border-radius: 16px;
+        background: rgba(0,168,204,0.04);
+        border-radius: 18px;
         padding: 1rem;
-        border: 1px solid rgba(255,255,255,0.05);
+        border: 1px solid rgba(0,168,204,0.08);
     }
-    
-    /* Hide Streamlit branding */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
-    
-    /* Custom divider */
     hr {
         border: none;
         height: 1px;
-        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        background: linear-gradient(90deg, transparent, #F9D923, transparent);
         margin: 2rem 0;
     }
-    
-    /* Caption styling */
     .stCaption {
-        color: #888 !important;
+        color: #B8B8D1 !important;
     }
 </style>
 """, unsafe_allow_html=True)
 
 # Color scheme
-COLOR_MAIN = '#FF6B6B'
-COLOR_PROFIT = '#FFD93D'
-COLOR_HIGHLIGHT = '#4ECDC4'
-COLOR_BG = '#1a1a2e'
+COLOR_MAIN = '#00A8CC'  # blue
+COLOR_PROFIT = '#F9D923'  # yellow
+COLOR_HIGHLIGHT = '#F96D00'  # orange
+COLOR_BG = '#232946'  # dark blue
 
 # ============================================================================
 # DATA LOADING
@@ -226,6 +206,18 @@ def load_data():
 # Load data
 df = load_data()
 
+@st.cache_data
+def load_vgsales():
+    try:
+        df = pd.read_csv("data/vgsales_cleaned.csv")
+    except Exception as e:
+        st.error(f"Error loading vgsales_cleaned.csv: {e}")
+        return pd.DataFrame()
+    return df
+
+vgsales_df = load_vgsales()
+
+
 # ============================================================================
 # HEADER
 # ============================================================================
@@ -319,15 +311,13 @@ if len(graph_data) > 0:
         avg_success = monthly_analysis['Steam Score'].mean()
 
         # Auto-coloring:
-        # Dark red = below average
-        # Light red = above average
+        # Blue = below average, Orange = above average
         colors = [
-            '#B22222' if rate < avg_success else '#FF6B6B'
+            COLOR_MAIN if rate < avg_success else COLOR_HIGHLIGHT
             for rate in monthly_analysis['Steam Score']
         ]
-
         opacities = [
-            0.95 if rate < avg_success else 0.45
+            0.95 if rate < avg_success else 0.65
             for rate in monthly_analysis['Steam Score']
         ]
 
@@ -365,18 +355,18 @@ if len(graph_data) > 0:
         fig1.update_layout(
             xaxis=dict(
                 title="Release Month",
-                tickfont=dict(color='white', size=11),
-                gridcolor='rgba(255,255,255,0.05)'
+                tickfont=dict(color=COLOR_MAIN, size=12),
+                gridcolor=COLOR_BG
             ),
             yaxis=dict(
                 title="Success Rate (%)",
-                gridcolor='rgba(255,255,255,0.1)',
-                tickfont=dict(color='white')
+                gridcolor=COLOR_BG,
+                tickfont=dict(color=COLOR_MAIN)
             ),
             height=500,
-            paper_bgcolor='rgba(0,0,0,0)',
-            plot_bgcolor='rgba(0,0,0,0)',
-            font=dict(color='white'),
+            paper_bgcolor=COLOR_BG,
+            plot_bgcolor=COLOR_BG,
+            font=dict(color=COLOR_MAIN),
             showlegend=False
         )
 
@@ -446,7 +436,8 @@ if len(graph_data2) > 0:
     fig2 = go.Figure()
     
     # Color gradient for price bands
-    colors = ['#4ECDC4', '#45B7AA', '#3CA18E', '#338B72', '#2A7556', '#215F3A']
+    # Colorblind-friendly palette
+    colors = ['#00A8CC', '#F9D923', '#F96D00', '#EA5455', '#2D4059', '#B8B8D1']
     
     for i, price_band in enumerate(price_labels):
         band_data = graph_data2[graph_data2['price_band'] == price_band]['Steam Score']
@@ -468,14 +459,14 @@ if len(graph_data2) > 0:
         xaxis_title="Price Band",
         yaxis_title="Steam Score (0-1)",
         height=500,
-        paper_bgcolor='rgba(0,0,0,0)',
-        plot_bgcolor='rgba(0,0,0,0)',
-        font=dict(color='white'),
+        paper_bgcolor=COLOR_BG,
+        plot_bgcolor=COLOR_BG,
+        font=dict(color=COLOR_MAIN),
         yaxis=dict(
-            gridcolor='rgba(255,255,255,0.1)',
+            gridcolor=COLOR_BG,
             range=[0, 1.05]
         ),
-        xaxis=dict(gridcolor='rgba(255,255,255,0.1)'),
+        xaxis=dict(gridcolor=COLOR_BG),
         showlegend=False
     )
     
@@ -547,46 +538,46 @@ if len(graph_data3) > 0:
             ))
         
         # Add dots colored by profit
-        fig3.add_trace(go.Scatter(
-            x=lollipop['success_rate'],
-            y=lollipop['primary_genre'],
-            mode='markers',
-            marker=dict(
-                size=14,
-                color=lollipop['profit'],
-                colorscale=[[0, '#FF6B6B'], [0.5, '#FFD93D'], [1, '#4ECDC4']],
-                line=dict(color='white', width=2),
-                colorbar=dict(
-                    title=dict(text="Median<br>Profit ($)", side="right"),
-                    tickfont=dict(color='white'),
-                    tickformat='$,.0f'
+            fig3.add_trace(go.Scatter(
+                x=lollipop['success_rate'],
+                y=lollipop['primary_genre'],
+                mode='markers',
+                marker=dict(
+                    size=22,  # Increased size for better visibility
+                    color=lollipop['profit'],
+                    colorscale='Viridis',
+                    line=dict(color=COLOR_MAIN, width=2),
+                    colorbar=dict(
+                        title=dict(text="Median<br>Profit ($)", side="right"),
+                        tickfont=dict(color=COLOR_MAIN),
+                        tickformat='$,.0f'
+                    ),
+                    showscale=True
                 ),
-                showscale=True
-            ),
-            hovertemplate='<b>%{y}</b><br>' +
-                         'Success Rate: %{x:.1f}%<br>' +
-                         'Median Profit: $%{marker.color:,.0f}<br>' +
-                         'Games: %{customdata:,}<extra></extra>',
-            customdata=lollipop['count'],
-            showlegend=False
-        ))
+                hovertemplate='<b>%{y}</b><br>' +
+                             'Success Rate: %{x:.1f}%<br>' +
+                             'Median Profit: $%{marker.color:,.0f}<br>' +
+                             'Games: %{customdata:,}<extra></extra>',
+                customdata=lollipop['count'],
+                showlegend=False
+            ))
         
         fig3.update_layout(
             xaxis=dict(
                 title="Success Rate (% with Steam Score ≥ 0.7)",
-                gridcolor='rgba(255,255,255,0.1)',
-                tickfont=dict(color='white'),
+                gridcolor=COLOR_BG,
+                tickfont=dict(color=COLOR_MAIN),
                 range=[0, max(lollipop['success_rate']) * 1.05]
             ),
             yaxis=dict(
                 title="",
-                tickfont=dict(color='white', size=10),
-                gridcolor='rgba(255,255,255,0.05)'
+                tickfont=dict(color=COLOR_MAIN, size=12),
+                gridcolor=COLOR_BG
             ),
             height=max(600, len(lollipop) * 25),
-            paper_bgcolor='rgba(0,0,0,0)',
-            plot_bgcolor='rgba(0,0,0,0)',
-            font=dict(color='white'),
+            paper_bgcolor=COLOR_BG,
+            plot_bgcolor=COLOR_BG,
+            font=dict(color=COLOR_MAIN),
             margin=dict(l=150, r=20, t=40, b=60)
         )
         
@@ -621,6 +612,238 @@ else:
     st.warning(f"No data found for {filter_label}")
 
 st.markdown("---")
+# ============================================================================
+# GRAPH X: PLATFORM LAUNCH STRATEGY ANALYSIS (VGCHARTZ)
+# ============================================================================
+st.markdown("## 🎮 Platform Launch Ecosystem Impact on Sales")
+
+if len(vgsales_df) > 0:
+
+    # Prepare copy
+    df_clean = vgsales_df.copy()
+
+    # Step 1: Extract earliest launch year per game
+    multi_platform_games = (
+        df_clean.groupby('Name')
+        .agg(
+            Min_Year=('Year', 'min'),
+            Release_Span=('Year', lambda x: x.max() - x.min()),
+            Total_Sales=('Global_Sales', 'sum'),
+            Platform_Count=('Platform', 'nunique')
+        )
+        .reset_index()
+    )
+
+    # Strategy column (Instant vs Gradual)
+    multi_platform_games['Strategy'] = multi_platform_games.apply(
+        lambda row: 'Instant' if row['Release_Span'] == 0 else 'Gradual',
+        axis=1
+    )
+
+    # Step 2: Merge years back to full DF
+    launch_data = df_clean.merge(
+        multi_platform_games[['Name', 'Min_Year', 'Strategy', 'Total_Sales']],
+        on="Name",
+        how="inner"
+    )
+
+    # Only rows on launch year
+    launch_data = launch_data[launch_data['Year'] == launch_data['Min_Year']]
+
+    # Step 3: Collect first-launch platforms per game
+    first_platforms = (
+        launch_data.groupby('Name')['Platform']
+        .apply(lambda x: sorted(list(set(x))))
+        .reset_index()
+        .rename(columns={'Platform': 'Launch_Platforms'})
+    )
+
+    # Classification function
+    def classify_launch(platforms):
+        if any(p in platforms for p in ['PS3', 'X360']):
+            return 'Gen 7 Console (PS3/X360)'
+        elif any(p in platforms for p in ['PS2', 'XB', 'GC']):
+            return 'Gen 6 Console (PS2/XB/GC)'
+        elif platforms == ['PC']:
+            return 'PC Exclusive Start'
+        elif 'Wii' in platforms:
+            return 'Wii'
+        elif any(p in platforms for p in ['DS', 'PSP', 'GBA']):
+            return 'Handheld'
+        else:
+            return 'Other/Mixed'
+
+    first_platforms['Launch_Type'] = first_platforms['Launch_Platforms'].apply(classify_launch)
+
+    # Merge back
+    platform_analysis = multi_platform_games.merge(first_platforms, on="Name", how="left")
+
+    # Only gradual releases
+    gradual_df = platform_analysis[platform_analysis['Strategy'] == 'Gradual'].copy()
+
+    if len(gradual_df) > 0:
+
+        st.markdown("### 📈 Revenue Distribution by Launch Ecosystem (Gradual Releases Only)")
+
+        # Prepare Plotly violin chart
+        fig = go.Figure()
+
+        for lt in gradual_df['Launch_Type'].unique():
+            subset = gradual_df[gradual_df['Launch_Type'] == lt]
+            fig.add_trace(go.Violin(
+                y=subset['Total_Sales'],
+                x=[lt] * len(subset),
+                name=lt,
+                box_visible=True,
+                meanline_visible=True,
+                spanmode="hard",
+                line=dict(color='white'),
+                fillcolor='rgba(255,255,255,0.1)',
+                opacity=0.7
+            ))
+
+        fig.update_layout(
+            height=600,
+            title="Revenue by Launch Ecosystem",
+            xaxis_title="Launch Type",
+            yaxis_title="Total Global Sales (Millions, Log Scale)",
+            yaxis=dict(type='log', gridcolor='rgba(255,255,255,0.1)'),
+            paper_bgcolor='rgba(0,0,0,0)',
+            plot_bgcolor='rgba(0,0,0,0)',
+            font=dict(color='white'),
+            showlegend=False
+        )
+
+        st.plotly_chart(fig, use_container_width=True)
+
+        # Insights
+        summary = (
+            gradual_df.groupby("Launch_Type")['Total_Sales']
+            .median()
+            .sort_values(ascending=False)
+        )
+
+        st.markdown("### 🏆 Median Revenue by Launch Ecosystem")
+        
+        for lt, med in summary.items():
+            st.markdown(
+                f"- **{lt}** → Median Revenue: **{med:.1f}M**"
+            )
+
+    else:
+        st.info("No gradual multi-platform titles found in vgsales dataset.")
+
+else:
+    st.warning("VG sales dataset could not be loaded.")
+
+# ============================================================================
+# GRAPH X: RELEASE STRATEGY — GRADUAL VS SIMULTANEOUS (VGCHARTZ)
+# ============================================================================
+st.markdown("## 🕒 Release Strategy: Gradual vs Simultaneous Launches")
+
+if len(vgsales_df) > 0:
+
+    df_clean = vgsales_df.copy()
+
+    # ----------------------------------------------------
+    # 1. Aggregate platform-level rows → per-game stats
+    # ----------------------------------------------------
+    game_stats = df_clean.groupby('Name').agg(
+        Min_Year=('Year', 'min'),
+        Max_Year=('Year', 'max'),
+        Platform_Count=('Platform', 'nunique'),
+        Total_Sales=('Global_Sales', 'sum')
+    ).reset_index()
+
+    # Compute release span
+    game_stats['Release_Span'] = game_stats['Max_Year'] - game_stats['Min_Year']
+
+    # Multi-platform only
+    multi_platform_games = game_stats[game_stats['Platform_Count'] > 1].copy()
+
+    # Classify strategy
+    multi_platform_games['Strategy'] = multi_platform_games['Release_Span'].apply(
+        lambda s: 'Simultaneous' if s == 0 else 'Gradual'
+    )
+
+    # ----------------------------------------------------
+    # 2. Plotly Violin + Strip equivalent
+    # ----------------------------------------------------
+    st.markdown("### 🎻 Global Sales Distribution (Log Scale)")
+
+    fig = go.Figure()
+
+    # VIOLIN LAYERS
+    fig.add_trace(go.Violin(
+        x=multi_platform_games['Strategy'],
+        y=multi_platform_games['Total_Sales'],
+        name="Distribution",
+        box_visible=True,
+        meanline_visible=True,
+        points=False,
+        line=dict(color='white'),
+        fillcolor='rgba(70,130,180,0.3)'
+    ))
+
+    # STRIP POINTS (limit to 1000 for readability)
+    strip_sample = (
+        multi_platform_games.sample(1000, random_state=42)
+        if len(multi_platform_games) > 1000
+        else multi_platform_games
+    )
+
+    fig.add_trace(go.Scatter(
+        x=strip_sample['Strategy'],
+        y=strip_sample['Total_Sales'],
+        mode='markers',
+        marker=dict(color='white', size=4, opacity=0.3),
+        showlegend=False,
+        hovertemplate="<b>%{x}</b><br>Sales: %{y:.2f}M<extra></extra>"
+    ))
+
+    fig.update_layout(
+        height=600,
+        yaxis=dict(type='log', title="Total Sales (Millions, Log Scale)",
+                   gridcolor='rgba(255,255,255,0.1)'),
+        xaxis_title="Release Strategy",
+        paper_bgcolor='rgba(0,0,0,0)',
+        plot_bgcolor='rgba(0,0,0,0)',
+        font=dict(color='white'),
+    )
+
+    st.plotly_chart(fig, use_container_width=True)
+
+    # ----------------------------------------------------
+    # 3. Strategy Metrics Table
+    # ----------------------------------------------------
+    st.markdown("### 📊 Strategy Performance Metrics")
+
+    strategy_metrics = (
+        multi_platform_games
+        .groupby('Strategy')['Total_Sales']
+        .agg(['mean', 'median', 'count'])
+        .sort_values('median', ascending=False)
+    )
+
+    st.dataframe(strategy_metrics.style.format({
+        "mean": "{:.2f}",
+        "median": "{:.2f}",
+        "count": "{:,.0f}"
+    }))
+
+    # ----------------------------------------------------
+    # 4. Quick counts for strategies
+    # ----------------------------------------------------
+    st.markdown("### 📦 Strategy Distribution")
+
+    strategy_counts = multi_platform_games['Strategy'].value_counts()
+
+    for strategy, count in strategy_counts.items():
+        st.markdown(f"- **{strategy}** → {count:,} games")
+
+else:
+    st.warning("Could not load vgsales_cleaned.csv — ensure the file exists.")
+
 
 # ============================================================================
 # FOOTER
