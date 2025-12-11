@@ -184,6 +184,12 @@ def load_data():
     else:
         df['Average playtime forever'] = df['Average playtime forever'].fillna(0)
     
+    # Peak CCU
+    if 'Peak CCU' not in df.columns:
+        df['Peak CCU'] = 0
+    else:
+        df['Peak CCU'] = df['Peak CCU'].fillna(0)
+    
     # Indie status
     def check_indie(row):
         genres = str(row.get('Genres', '')).lower()
@@ -277,66 +283,143 @@ else:
 
 # Get filter label for display
 filter_label = "All Games" if game_filter == 'All Games' else ("Indie Games" if game_filter == 'Indie Only' else "Non-Indie Games")
-
 # ============================================================================
-# GRAPH 1: HEATMAP
+# GRAPH 1: RELEASE TIMING SUCCESS RATE
 # ============================================================================
-st.markdown("## 📅 Release Timing & Pricing Analysis")
+st.markdown("## 📅 Avoid Summer Releases - Success Rate by Month")
 
 graph_data = filtered_df.copy()
 
 if len(graph_data) > 0:
-    # Create heatmap data
-    playtime_heatmap = graph_data.groupby(['ReleaseMonth', 'price_bin'])['Average playtime forever'].mean().unstack()
-    
-    # Ensure all months 1-12 are present
-    all_months = list(range(1, 13))
-    playtime_heatmap = playtime_heatmap.reindex(all_months)
-    
-    # Price band order
-    price_order = ['Free', '$0-5', '$5-10', '$10-20', '$20-30', '$30+']
-    playtime_heatmap = playtime_heatmap.reindex(columns=price_order)
-    
-    # Create Plotly heatmap with dark theme
-    fig1 = go.Figure(data=go.Heatmap(
-        z=playtime_heatmap.values,
-        x=playtime_heatmap.columns.tolist(),
-        y=['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-        colorscale=[
-            [0, '#1a1a2e'],
-            [0.25, '#16213e'],
-            [0.5, '#4ECDC4'],
-            [0.75, '#FFD93D'],
-            [1, '#FF6B6B']
-        ],
-        hovertemplate='<b>%{y}</b> | <b>%{x}</b><br>Avg Playtime: %{z:.1f} min<extra></extra>',
-        colorbar=dict(
-            title=dict(text="Playtime (min)", side="right"),
-            tickfont=dict(color='white')
-        ),
-        zmin=0
-    ))
-    
-    fig1.update_layout(
-        xaxis_title="Price Band",
-        yaxis_title="Release Month",
-        yaxis=dict(autorange='reversed'),
-        height=500,
-        paper_bgcolor='rgba(0,0,0,0)',
-        plot_bgcolor='rgba(0,0,0,0)',
-        font=dict(color='white'),
-        xaxis=dict(gridcolor='rgba(255,255,255,0.1)'),
-    )
-    
-    st.plotly_chart(fig1, width="stretch")
-    
-    st.markdown(f"""
-    <div class="insight-card">
-        <h4>💡 Key Insight</h4>
-        <p>Analyzing <strong>{len(graph_data):,}</strong> {filter_label.lower()}. Darker/warmer colors indicate higher average playtime. 
-        Look for patterns in release timing and pricing that lead to better player engagement.</p>
-    </div>
-    """, unsafe_allow_html=True)
+
+    # Calculate release month
+    graph_data['release_month'] = pd.to_datetime(
+        graph_data['Release date'], errors='coerce'
+    ).dt.month
+
+    # Month names
+    month_names = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                   'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
+    # Monthly analysis
+    monthly_analysis = graph_data.groupby('release_month').agg({
+        'Steam Score': lambda x: ((x >= 0.7).sum() / len(x) * 100) if len(x) > 0 else 0,
+        'Name': 'count'
+    }).reset_index()
+
+    # Force month to integer (fix float → index error)
+    monthly_analysis['release_month'] = monthly_analysis['release_month'].astype(int)
+
+    # Filter months with at least 100 releases
+    monthly_analysis = monthly_analysis[monthly_analysis['Name'] >= 100]
+
+    if len(monthly_analysis) > 0:
+
+        # Average success rate
+        avg_success = monthly_analysis['Steam Score'].mean()
+
+        # Auto-coloring:
+        # Dark red = below average
+        # Light red = above average
+        colors = [
+            '#B22222' if rate < avg_success else '#FF6B6B'
+            for rate in monthly_analysis['Steam Score']
+        ]
+
+        opacities = [
+            0.95 if rate < avg_success else 0.45
+            for rate in monthly_analysis['Steam Score']
+        ]
+
+        # Create bar chart
+        fig1 = go.Figure()
+
+        fig1.add_trace(go.Bar(
+            x=[month_names[m-1] for m in monthly_analysis['release_month']],
+            y=monthly_analysis['Steam Score'],
+            marker=dict(
+                color=colors,
+                opacity=opacities,
+                line=dict(color='white', width=1.5)
+            ),
+            text=[f"{rate:.1f}%" for rate in monthly_analysis['Steam Score']],
+            textposition='outside',
+            textfont=dict(size=10, color='white', family='Arial Black'),
+            hovertemplate='<b>%{x}</b><br>' +
+                          'Success Rate: %{y:.1f}%<br>' +
+                          'Games: %{customdata:,}<extra></extra>',
+            customdata=monthly_analysis['Name']
+        ))
+
+        # Add average line
+        fig1.add_hline(
+            y=avg_success,
+            line_dash="dash",
+            line_color="#4ECDC4",
+            line_width=2,
+            annotation_text=f"Average: {avg_success:.1f}%",
+            annotation_position="right",
+            annotation_font=dict(color='#4ECDC4', size=11)
+        )
+
+        fig1.update_layout(
+            xaxis=dict(
+                title="Release Month",
+                tickfont=dict(color='white', size=11),
+                gridcolor='rgba(255,255,255,0.05)'
+            ),
+            yaxis=dict(
+                title="Success Rate (%)",
+                gridcolor='rgba(255,255,255,0.1)',
+                tickfont=dict(color='white')
+            ),
+            height=500,
+            paper_bgcolor='rgba(0,0,0,0)',
+            plot_bgcolor='rgba(0,0,0,0)',
+            font=dict(color='white'),
+            showlegend=False
+        )
+
+        # Render chart
+        st.plotly_chart(fig1, use_container_width=True)
+
+        # Best & worst months
+        best_month = monthly_analysis.loc[monthly_analysis['Steam Score'].idxmax()]
+        worst_month = monthly_analysis.loc[monthly_analysis['Steam Score'].idxmin()]
+
+        col1, col2 = st.columns(2)
+
+        with col1:
+            st.markdown(f"""
+            <div class="insight-card">
+                <h4>✅ Best Month: {month_names[int(best_month['release_month'])-1]}</h4>
+                <p><strong>{best_month['Steam Score']:.1f}%</strong> success rate  
+                with <strong>{int(best_month['Name']):,}</strong> games</p>
+            </div>
+            """, unsafe_allow_html=True)
+
+        with col2:
+            st.markdown(f"""
+            <div class="insight-card">
+                <h4>❌ Worst Month: {month_names[int(worst_month['release_month'])-1]}</h4>
+                <p><strong>{worst_month['Steam Score']:.1f}%</strong> success rate  
+                with <strong>{int(worst_month['Name']):,}</strong> games</p>
+            </div>
+            """, unsafe_allow_html=True)
+
+        st.markdown(f"""
+        <div class="insight-card">
+            <h4>💡 Strategic Insight</h4>
+            <p>Bars automatically turn <strong>dark red</strong> when their success rate falls
+            <strong>below the monthly average</strong>.  
+            Based on <strong>{len(graph_data):,}</strong> {filter_label.lower()} 
+            with at least 100 releases per month.</p>
+        </div>
+        """, unsafe_allow_html=True)
+
+    else:
+        st.info("Not enough data: Need at least 100 games per month.")
+
 else:
     st.warning(f"No data found for {filter_label}")
 
@@ -396,7 +479,7 @@ if len(graph_data2) > 0:
         showlegend=False
     )
     
-    st.plotly_chart(fig2, width="stretch")
+    st.plotly_chart(fig2, use_container_width=True)
     
     # Calculate median summary
     summary = (
@@ -424,106 +507,116 @@ else:
 st.markdown("---")
 
 # ============================================================================
-# GRAPH 3: GENRE ANALYSIS
+# GRAPH 3: LOLLIPOP CHART - GENRE SUCCESS + PROFIT
 # ============================================================================
-st.markdown("## 🎯 Genre Performance Analysis")
+st.markdown("## 🎯 Genre Success Rates & Profitability")
 
 graph_data3 = filtered_df.copy()
 
 if len(graph_data3) > 0:
-    genre_stats = (
+    # Prepare lollipop data
+    lollipop = (
         graph_data3[graph_data3['primary_genre'].notna()]
         .groupby('primary_genre')
         .agg(
-            avg_success=('Steam Score', lambda x: (x >= 0.7).mean() * 100),
-            count=('Name', 'count'),
-            EstimatedProfit=('EstimatedProfit', 'mean')
+            success_rate=('Steam Score', lambda x: (x >= 0.7).mean() * 100),
+            profit=('EstimatedProfit', 'median'),
+            count=('Name', 'count')
         )
         .reset_index()
     )
     
-    genre_stats = genre_stats[genre_stats['count'] >= 100]
-    genre_stats = genre_stats.sort_values('avg_success', ascending=False)
+    # Filter genres with at least 50 games
+    lollipop = lollipop[lollipop['count'] >= 50]
     
-    if len(genre_stats) > 0:
-        fig3 = make_subplots(specs=[[{"secondary_y": True}]])
+    # Sort by success rate for better visualization
+    lollipop = lollipop.sort_values('success_rate', ascending=True)
+    
+    if len(lollipop) > 0:
+        fig3 = go.Figure()
         
-        # Bar: Success Rate with gradient effect
-        fig3.add_trace(
-            go.Bar(
-                x=genre_stats['primary_genre'],
-                y=genre_stats['avg_success'],
-                name='Success Rate (%)',
-                marker=dict(
-                    color=genre_stats['avg_success'],
-                    colorscale=[[0, '#FF6B6B'], [0.5, '#FFD93D'], [1, '#4ECDC4']],
-                    line=dict(color='rgba(255,255,255,0.3)', width=1)
+        # Add stem lines (from 0 to success rate)
+        for idx, row in lollipop.iterrows():
+            fig3.add_trace(go.Scatter(
+                x=[0, row['success_rate']],
+                y=[row['primary_genre'], row['primary_genre']],
+                mode='lines',
+                line=dict(color='rgba(128,128,128,0.5)', width=2),
+                showlegend=False,
+                hoverinfo='skip'
+            ))
+        
+        # Add dots colored by profit
+        fig3.add_trace(go.Scatter(
+            x=lollipop['success_rate'],
+            y=lollipop['primary_genre'],
+            mode='markers',
+            marker=dict(
+                size=14,
+                color=lollipop['profit'],
+                colorscale=[[0, '#FF6B6B'], [0.5, '#FFD93D'], [1, '#4ECDC4']],
+                line=dict(color='white', width=2),
+                colorbar=dict(
+                    title=dict(text="Median<br>Profit ($)", side="right"),
+                    tickfont=dict(color='white'),
+                    tickformat='$,.0f'
                 ),
-                opacity=0.9,
-                hovertemplate='<b>%{x}</b><br>Success Rate: %{y:.1f}%<br>Games: %{customdata}<extra></extra>',
-                customdata=genre_stats['count']
+                showscale=True
             ),
-            secondary_y=False
-        )
-        
-        # Line: Profit
-        fig3.add_trace(
-            go.Scatter(
-                x=genre_stats['primary_genre'],
-                y=genre_stats['EstimatedProfit'],
-                name='Avg Profit ($)',
-                mode='lines+markers',
-                marker=dict(color='#FFD93D', size=10, line=dict(color='white', width=2)),
-                line=dict(color='#FFD93D', width=3),
-                hovertemplate='<b>%{x}</b><br>Avg Profit: $%{y:,.0f}<extra></extra>'
-            ),
-            secondary_y=True
-        )
+            hovertemplate='<b>%{y}</b><br>' +
+                         'Success Rate: %{x:.1f}%<br>' +
+                         'Median Profit: $%{marker.color:,.0f}<br>' +
+                         'Games: %{customdata:,}<extra></extra>',
+            customdata=lollipop['count'],
+            showlegend=False
+        ))
         
         fig3.update_layout(
             xaxis=dict(
-                tickangle=45,
-                tickfont=dict(size=11, color='white'),
+                title="Success Rate (% with Steam Score ≥ 0.7)",
+                gridcolor='rgba(255,255,255,0.1)',
+                tickfont=dict(color='white'),
+                range=[0, max(lollipop['success_rate']) * 1.05]
+            ),
+            yaxis=dict(
+                title="",
+                tickfont=dict(color='white', size=10),
                 gridcolor='rgba(255,255,255,0.05)'
             ),
-            height=600,
+            height=max(600, len(lollipop) * 25),
             paper_bgcolor='rgba(0,0,0,0)',
             plot_bgcolor='rgba(0,0,0,0)',
             font=dict(color='white'),
-            hovermode='x unified',
-            showlegend=True,
-            legend=dict(
-                x=0.01, y=0.99,
-                bgcolor='rgba(0,0,0,0.5)',
-                bordercolor='rgba(255,255,255,0.1)',
-                borderwidth=1
-            )
+            margin=dict(l=150, r=20, t=40, b=60)
         )
         
-        fig3.update_yaxes(
-            title_text="Success Rate (%)", 
-            secondary_y=False, 
-            showgrid=True, 
-            gridcolor='rgba(255,255,255,0.1)'
-        )
-        fig3.update_yaxes(
-            title_text="Average Profit ($)", 
-            showgrid=False
-        )
+        st.plotly_chart(fig3, use_container_width=True)
         
-        st.plotly_chart(fig3, width="stretch")
+        # Top 3 performers
+        top3 = lollipop.nlargest(3, 'success_rate')
         
-        # Top performers
-        top_genre = genre_stats.iloc[0]
+        cols = st.columns(3)
+        for idx, (_, row) in enumerate(top3.iterrows()):
+            with cols[idx]:
+                medal = ['🥇', '🥈', '🥉'][idx]
+                st.markdown(f"""
+                <div class="insight-card" style="text-align: center;">
+                    <h4>{medal} {row['primary_genre']}</h4>
+                    <p><strong>{row['success_rate']:.1f}%</strong> Success Rate<br>
+                    Median Profit: <strong>${row['profit']:,.0f}</strong><br>
+                    ({int(row['count']):,} games)</p>
+                </div>
+                """, unsafe_allow_html=True)
+        
         st.markdown(f"""
         <div class="insight-card">
-            <h4>🏆 Top Performer: {top_genre['primary_genre']}</h4>
-            <p><strong>{top_genre['avg_success']:.1f}%</strong> success rate with <strong>{int(top_genre['count']):,}</strong> games 
-            | Average profit: <strong>${top_genre['EstimatedProfit']:,.0f}</strong></p>
+            <h4>💡 Reading the Chart</h4>
+            <p>Each dot represents a genre's success rate. Dot color indicates profitability (cooler colors = lower profit, warmer = higher profit).
+            Analyzing <strong>{len(lollipop)}</strong> genres from <strong>{len(graph_data3):,}</strong> {filter_label.lower()}.</p>
         </div>
         """, unsafe_allow_html=True)
     else:
-        st.info("Not enough data: Need genres with 100+ indie games")
+        st.info(f"Not enough genre data: Need genres with 50+ games in {filter_label.lower()}")
 else:
     st.warning(f"No data found for {filter_label}")
 
