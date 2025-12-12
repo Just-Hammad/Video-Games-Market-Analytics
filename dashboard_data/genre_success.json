@@ -1,0 +1,56 @@
+[
+    {
+        "genre": "RPG",
+        "success_rate": 70.0,
+        "mean_profit": 1592129.83,
+        "count": 130
+    },
+    {
+        "genre": "Strategy",
+        "success_rate": 66.4,
+        "mean_profit": 1102583.37,
+        "count": 137
+    },
+    {
+        "genre": "Simulation",
+        "success_rate": 58.7,
+        "mean_profit": 948104.95,
+        "count": 138
+    },
+    {
+        "genre": "Adventure",
+        "success_rate": 57.4,
+        "mean_profit": 338773.86,
+        "count": 12185
+    },
+    {
+        "genre": "Action",
+        "success_rate": 56.0,
+        "mean_profit": 543753.23,
+        "count": 25297
+    },
+    {
+        "genre": "Indie",
+        "success_rate": 56.0,
+        "mean_profit": 553383.61,
+        "count": 7450
+    },
+    {
+        "genre": "Casual",
+        "success_rate": 51.2,
+        "mean_profit": 115133.66,
+        "count": 11328
+    },
+    {
+        "genre": "Free to Play",
+        "success_rate": 39.5,
+        "mean_profit": 4590.76,
+        "count": 633
+    },
+    {
+        "genre": "Violent",
+        "success_rate": 35.1,
+        "mean_profit": 78665.06,
+        "count": 353
+    }
+]

@@ -1,0 +1,449 @@
+{
+    "kpis": [
+        {
+            "filter": "All Games",
+            "total": 61243,
+            "avg_price": 8.03,
+            "median_profit": 38471.43,
+            "avg_score": 77.5
+        },
+        {
+            "filter": "Indie Only",
+            "total": 45760,
+            "avg_price": 6.88,
+            "median_profit": 34706.09,
+            "avg_score": 78.0
+        },
+        {
+            "filter": "Non-Indie",
+            "total": 15483,
+            "avg_price": 11.43,
+            "median_profit": 56135.88,
+            "avg_score": 76.3
+        }
+    ],
+    "price_bands": {
+        "All Games": [
+            {
+                "band": "Free",
+                "q1": 58.3,
+                "median": 74.2,
+                "q3": 86.8,
+                "count": 7474
+            },
+            {
+                "band": "$0-5",
+                "q1": 62.5,
+                "median": 82.4,
+                "q3": 100.0,
+                "count": 25820
+            },
+            {
+                "band": "$5-10",
+                "q1": 67.9,
+                "median": 84.8,
+                "q3": 97.9,
+                "count": 13897
+            },
+            {
+                "band": "$10-20",
+                "q1": 70.9,
+                "median": 84.6,
+                "q3": 94.3,
+                "count": 10492
+            },
+            {
+                "band": "$20-30",
+                "q1": 70.0,
+                "median": 82.4,
+                "q3": 91.7,
+                "count": 2148
+            },
+            {
+                "band": "$30+",
+                "q1": 66.7,
+                "median": 81.0,
+                "q3": 90.6,
+                "count": 1412
+            }
+        ],
+        "Indie Only": [
+            {
+                "band": "Free",
+                "q1": 59.7,
+                "median": 75.0,
+                "q3": 87.6,
+                "count": 5056
+            },
+            {
+                "band": "$0-5",
+                "q1": 63.2,
+                "median": 82.4,
+                "q3": 100.0,
+                "count": 21306
+            },
+            {
+                "band": "$5-10",
+                "q1": 68.8,
+                "median": 85.2,
+                "q3": 97.7,
+                "count": 10220
+            },
+            {
+                "band": "$10-20",
+                "q1": 72.3,
+                "median": 85.3,
+                "q3": 94.5,
+                "count": 7692
+            },
+            {
+                "band": "$20-30",
+                "q1": 71.7,
+                "median": 83.2,
+                "q3": 91.7,
+                "count": 1187
+            },
+            {
+                "band": "$30+",
+                "q1": 62.6,
+                "median": 80.6,
+                "q3": 91.0,
+                "count": 299
+            }
+        ],
+        "Non-Indie": [
+            {
+                "band": "Free",
+                "q1": 56.7,
+                "median": 71.4,
+                "q3": 84.5,
+                "count": 2418
+            },
+            {
+                "band": "$0-5",
+                "q1": 60.0,
+                "median": 82.4,
+                "q3": 100.0,
+                "count": 4514
+            },
+            {
+                "band": "$5-10",
+                "q1": 66.7,
+                "median": 83.7,
+                "q3": 99.3,
+                "count": 3677
+            },
+            {
+                "band": "$10-20",
+                "q1": 66.7,
+                "median": 83.0,
+                "q3": 93.3,
+                "count": 2800
+            },
+            {
+                "band": "$20-30",
+                "q1": 67.3,
+                "median": 81.6,
+                "q3": 91.5,
+                "count": 961
+            },
+            {
+                "band": "$30+",
+                "q1": 67.1,
+                "median": 81.0,
+                "q3": 90.5,
+                "count": 1113
+            }
+        ]
+    },
+    "genre_lollipop": {
+        "All Games": [
+            {
+                "genre": "RPG",
+                "success_rate": 74.1,
+                "median_profit": 122762.12,
+                "count": 919
+            },
+            {
+                "genre": "Adventure",
+                "success_rate": 72.8,
+                "median_profit": 47242.82,
+                "count": 12567
+            },
+            {
+                "genre": "Strategy",
+                "success_rate": 70.1,
+                "median_profit": 125173.08,
+                "count": 932
+            },
+            {
+                "genre": "Casual",
+                "success_rate": 70.0,
+                "median_profit": 22608.39,
+                "count": 10621
+            },
+            {
+                "genre": "Indie",
+                "success_rate": 69.7,
+                "median_profit": 46191.43,
+                "count": 5991
+            },
+            {
+                "genre": "Action",
+                "success_rate": 68.4,
+                "median_profit": 40517.85,
+                "count": 25836
+            },
+            {
+                "genre": "Audio Production",
+                "success_rate": 66.4,
+                "median_profit": 73980.99,
+                "count": 113
+            },
+            {
+                "genre": "Animation & Modeling",
+                "success_rate": 64.6,
+                "median_profit": 39438.4,
+                "count": 277
+            },
+            {
+                "genre": "Racing",
+                "success_rate": 63.4,
+                "median_profit": 131846.02,
+                "count": 383
+            },
+            {
+                "genre": "Design & Illustration",
+                "success_rate": 62.2,
+                "median_profit": 62003.25,
+                "count": 148
+            },
+            {
+                "genre": "Unknown",
+                "success_rate": 61.4,
+                "median_profit": 30143.03,
+                "count": 70
+            },
+            {
+                "genre": "Education",
+                "success_rate": 60.6,
+                "median_profit": 7025.02,
+                "count": 132
+            },
+            {
+                "genre": "Utilities",
+                "success_rate": 59.9,
+                "median_profit": 16727.14,
+                "count": 242
+            },
+            {
+                "genre": "Simulation",
+                "success_rate": 57.4,
+                "median_profit": 91764.04,
+                "count": 1335
+            },
+            {
+                "genre": "Sexual Content",
+                "success_rate": 53.8,
+                "median_profit": 19894.46,
+                "count": 104
+            },
+            {
+                "genre": "Free to Play",
+                "success_rate": 52.9,
+                "median_profit": 0.0,
+                "count": 712
+            },
+            {
+                "genre": "Sports",
+                "success_rate": 50.7,
+                "median_profit": 33082.5,
+                "count": 150
+            },
+            {
+                "genre": "Massively Multiplayer",
+                "success_rate": 43.6,
+                "median_profit": 38443.96,
+                "count": 55
+            },
+            {
+                "genre": "Violent",
+                "success_rate": 35.6,
+                "median_profit": 25338.3,
+                "count": 433
+            },
+            {
+                "genre": "Nudity",
+                "success_rate": 32.8,
+                "median_profit": 18265.02,
+                "count": 61
+            }
+        ],
+        "Indie Only": [
+            {
+                "genre": "Adventure",
+                "success_rate": 72.6,
+                "median_profit": 42137.95,
+                "count": 9640
+            },
+            {
+                "genre": "RPG",
+                "success_rate": 72.2,
+                "median_profit": 76767.11,
+                "count": 126
+            },
+            {
+                "genre": "Casual",
+                "success_rate": 70.9,
+                "median_profit": 21740.55,
+                "count": 8181
+            },
+            {
+                "genre": "Indie",
+                "success_rate": 69.7,
+                "median_profit": 46191.43,
+                "count": 5991
+            },
+            {
+                "genre": "Action",
+                "success_rate": 69.1,
+                "median_profit": 37132.83,
+                "count": 20505
+            },
+            {
+                "genre": "Strategy",
+                "success_rate": 68.4,
+                "median_profit": 79888.03,
+                "count": 133
+            },
+            {
+                "genre": "Free to Play",
+                "success_rate": 60.0,
+                "median_profit": 0.0,
+                "count": 417
+            },
+            {
+                "genre": "Simulation",
+                "success_rate": 58.7,
+                "median_profit": 79944.3,
+                "count": 138
+            },
+            {
+                "genre": "Sexual Content",
+                "success_rate": 53.1,
+                "median_profit": 19457.11,
+                "count": 81
+            },
+            {
+                "genre": "Violent",
+                "success_rate": 36.9,
+                "median_profit": 23399.11,
+                "count": 336
+            }
+        ],
+        "Non-Indie": [
+            {
+                "genre": "RPG",
+                "success_rate": 74.4,
+                "median_profit": 132541.7,
+                "count": 793
+            },
+            {
+                "genre": "Adventure",
+                "success_rate": 73.7,
+                "median_profit": 68111.65,
+                "count": 2927
+            },
+            {
+                "genre": "Strategy",
+                "success_rate": 70.3,
+                "median_profit": 130816.41,
+                "count": 799
+            },
+            {
+                "genre": "Casual",
+                "success_rate": 66.9,
+                "median_profit": 25286.87,
+                "count": 2440
+            },
+            {
+                "genre": "Action",
+                "success_rate": 65.9,
+                "median_profit": 63653.04,
+                "count": 5331
+            },
+            {
+                "genre": "Animation & Modeling",
+                "success_rate": 65.9,
+                "median_profit": 44991.53,
+                "count": 258
+            },
+            {
+                "genre": "Audio Production",
+                "success_rate": 64.8,
+                "median_profit": 73733.56,
+                "count": 105
+            },
+            {
+                "genre": "Unknown",
+                "success_rate": 63.0,
+                "median_profit": 30143.03,
+                "count": 54
+            },
+            {
+                "genre": "Racing",
+                "success_rate": 62.4,
+                "median_profit": 150460.5,
+                "count": 351
+            },
+            {
+                "genre": "Design & Illustration",
+                "success_rate": 60.6,
+                "median_profit": 61513.23,
+                "count": 137
+            },
+            {
+                "genre": "Education",
+                "success_rate": 60.5,
+                "median_profit": 6117.35,
+                "count": 124
+            },
+            {
+                "genre": "Utilities",
+                "success_rate": 58.6,
+                "median_profit": 16427.01,
+                "count": 222
+            },
+            {
+                "genre": "Simulation",
+                "success_rate": 57.2,
+                "median_profit": 93104.77,
+                "count": 1197
+            },
+            {
+                "genre": "Sports",
+                "success_rate": 50.4,
+                "median_profit": 32006.96,
+                "count": 141
+            },
+            {
+                "genre": "Massively Multiplayer",
+                "success_rate": 48.0,
+                "median_profit": 40583.42,
+                "count": 50
+            },
+            {
+                "genre": "Free to Play",
+                "success_rate": 43.1,
+                "median_profit": 0.0,
+                "count": 295
+            },
+            {
+                "genre": "Violent",
+                "success_rate": 30.9,
+                "median_profit": 40377.58,
+                "count": 97
+            }
+        ]
+    }
+}

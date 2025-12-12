@@ -1,0 +1,62 @@
+[
+    {
+        "launch_type": "PC-Exclusive Start",
+        "count": 80,
+        "median": 1.68,
+        "q1": 0.5,
+        "q3": 4.0,
+        "min": 0.01,
+        "max": 8.11,
+        "mean": 2.2
+    },
+    {
+        "launch_type": "Gen 7 Console (PS3/X360)",
+        "count": 115,
+        "median": 0.97,
+        "q1": 0.21,
+        "q3": 2.62,
+        "min": 0.01,
+        "max": 37.78,
+        "mean": 2.19
+    },
+    {
+        "launch_type": "Other/Mixed",
+        "count": 200,
+        "median": 0.75,
+        "q1": 0.3,
+        "q3": 1.8,
+        "min": 0.03,
+        "max": 40.24,
+        "mean": 1.8
+    },
+    {
+        "launch_type": "Gen 6 Console (PS2/XB/GC)",
+        "count": 190,
+        "median": 0.59,
+        "q1": 0.19,
+        "q3": 1.64,
+        "min": 0.01,
+        "max": 20.81,
+        "mean": 1.58
+    },
+    {
+        "launch_type": "Wii",
+        "count": 40,
+        "median": 0.56,
+        "q1": 0.15,
+        "q3": 1.45,
+        "min": 0.03,
+        "max": 10.05,
+        "mean": 1.44
+    },
+    {
+        "launch_type": "Handheld",
+        "count": 107,
+        "median": 0.23,
+        "q1": 0.1,
+        "q3": 0.54,
+        "min": 0.01,
+        "max": 7.72,
+        "mean": 0.69
+    }
+]

@@ -1,0 +1,65 @@
+[
+    {
+        "genre": "Action",
+        "competition": 43.9,
+        "success_rate": 56.0,
+        "market_type": "Crowded",
+        "count": 25297
+    },
+    {
+        "genre": "Adventure",
+        "competition": 21.1,
+        "success_rate": 57.4,
+        "market_type": "Viable",
+        "count": 12185
+    },
+    {
+        "genre": "Casual",
+        "competition": 19.6,
+        "success_rate": 51.2,
+        "market_type": "Viable",
+        "count": 11328
+    },
+    {
+        "genre": "Free to Play",
+        "competition": 1.1,
+        "success_rate": 39.5,
+        "market_type": "Safe Haven",
+        "count": 633
+    },
+    {
+        "genre": "Indie",
+        "competition": 12.9,
+        "success_rate": 56.0,
+        "market_type": "Safe Haven",
+        "count": 7450
+    },
+    {
+        "genre": "RPG",
+        "competition": 0.2,
+        "success_rate": 70.0,
+        "market_type": "Safe Haven",
+        "count": 130
+    },
+    {
+        "genre": "Simulation",
+        "competition": 0.2,
+        "success_rate": 58.7,
+        "market_type": "Safe Haven",
+        "count": 138
+    },
+    {
+        "genre": "Strategy",
+        "competition": 0.2,
+        "success_rate": 66.4,
+        "market_type": "Safe Haven",
+        "count": 137
+    },
+    {
+        "genre": "Violent",
+        "competition": 0.6,
+        "success_rate": 35.1,
+        "market_type": "Safe Haven",
+        "count": 353
+    }
+]
