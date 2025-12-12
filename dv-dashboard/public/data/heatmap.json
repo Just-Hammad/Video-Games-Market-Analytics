@@ -1,0 +1,362 @@
+[
+    {
+        "month": "Jan",
+        "price_band": "Free",
+        "avg_playtime": 55.2
+    },
+    {
+        "month": "Jan",
+        "price_band": "$0-5",
+        "avg_playtime": 40.0
+    },
+    {
+        "month": "Jan",
+        "price_band": "$5-10",
+        "avg_playtime": 83.9
+    },
+    {
+        "month": "Jan",
+        "price_band": "$10-20",
+        "avg_playtime": 168.6
+    },
+    {
+        "month": "Jan",
+        "price_band": "$20-30",
+        "avg_playtime": 404.0
+    },
+    {
+        "month": "Jan",
+        "price_band": "$30+",
+        "avg_playtime": 712.1
+    },
+    {
+        "month": "Feb",
+        "price_band": "Free",
+        "avg_playtime": 122.9
+    },
+    {
+        "month": "Feb",
+        "price_band": "$0-5",
+        "avg_playtime": 35.1
+    },
+    {
+        "month": "Feb",
+        "price_band": "$5-10",
+        "avg_playtime": 94.9
+    },
+    {
+        "month": "Feb",
+        "price_band": "$10-20",
+        "avg_playtime": 201.8
+    },
+    {
+        "month": "Feb",
+        "price_band": "$20-30",
+        "avg_playtime": 293.4
+    },
+    {
+        "month": "Feb",
+        "price_band": "$30+",
+        "avg_playtime": 960.1
+    },
+    {
+        "month": "Mar",
+        "price_band": "Free",
+        "avg_playtime": 132.0
+    },
+    {
+        "month": "Mar",
+        "price_band": "$0-5",
+        "avg_playtime": 31.3
+    },
+    {
+        "month": "Mar",
+        "price_band": "$5-10",
+        "avg_playtime": 68.7
+    },
+    {
+        "month": "Mar",
+        "price_band": "$10-20",
+        "avg_playtime": 151.0
+    },
+    {
+        "month": "Mar",
+        "price_band": "$20-30",
+        "avg_playtime": 442.7
+    },
+    {
+        "month": "Mar",
+        "price_band": "$30+",
+        "avg_playtime": 639.3
+    },
+    {
+        "month": "Apr",
+        "price_band": "Free",
+        "avg_playtime": 84.0
+    },
+    {
+        "month": "Apr",
+        "price_band": "$0-5",
+        "avg_playtime": 56.5
+    },
+    {
+        "month": "Apr",
+        "price_band": "$5-10",
+        "avg_playtime": 105.3
+    },
+    {
+        "month": "Apr",
+        "price_band": "$10-20",
+        "avg_playtime": 198.0
+    },
+    {
+        "month": "Apr",
+        "price_band": "$20-30",
+        "avg_playtime": 339.2
+    },
+    {
+        "month": "Apr",
+        "price_band": "$30+",
+        "avg_playtime": 888.0
+    },
+    {
+        "month": "May",
+        "price_band": "Free",
+        "avg_playtime": 60.4
+    },
+    {
+        "month": "May",
+        "price_band": "$0-5",
+        "avg_playtime": 96.1
+    },
+    {
+        "month": "May",
+        "price_band": "$5-10",
+        "avg_playtime": 65.3
+    },
+    {
+        "month": "May",
+        "price_band": "$10-20",
+        "avg_playtime": 144.0
+    },
+    {
+        "month": "May",
+        "price_band": "$20-30",
+        "avg_playtime": 333.2
+    },
+    {
+        "month": "May",
+        "price_band": "$30+",
+        "avg_playtime": 566.7
+    },
+    {
+        "month": "Jun",
+        "price_band": "Free",
+        "avg_playtime": 108.1
+    },
+    {
+        "month": "Jun",
+        "price_band": "$0-5",
+        "avg_playtime": 38.2
+    },
+    {
+        "month": "Jun",
+        "price_band": "$5-10",
+        "avg_playtime": 72.8
+    },
+    {
+        "month": "Jun",
+        "price_band": "$10-20",
+        "avg_playtime": 342.0
+    },
+    {
+        "month": "Jun",
+        "price_band": "$20-30",
+        "avg_playtime": 314.1
+    },
+    {
+        "month": "Jun",
+        "price_band": "$30+",
+        "avg_playtime": 583.5
+    },
+    {
+        "month": "Jul",
+        "price_band": "Free",
+        "avg_playtime": 95.3
+    },
+    {
+        "month": "Jul",
+        "price_band": "$0-5",
+        "avg_playtime": 28.9
+    },
+    {
+        "month": "Jul",
+        "price_band": "$5-10",
+        "avg_playtime": 61.4
+    },
+    {
+        "month": "Jul",
+        "price_band": "$10-20",
+        "avg_playtime": 156.7
+    },
+    {
+        "month": "Jul",
+        "price_band": "$20-30",
+        "avg_playtime": 253.4
+    },
+    {
+        "month": "Jul",
+        "price_band": "$30+",
+        "avg_playtime": 501.7
+    },
+    {
+        "month": "Aug",
+        "price_band": "Free",
+        "avg_playtime": 95.0
+    },
+    {
+        "month": "Aug",
+        "price_band": "$0-5",
+        "avg_playtime": 30.3
+    },
+    {
+        "month": "Aug",
+        "price_band": "$5-10",
+        "avg_playtime": 69.1
+    },
+    {
+        "month": "Aug",
+        "price_band": "$10-20",
+        "avg_playtime": 164.8
+    },
+    {
+        "month": "Aug",
+        "price_band": "$20-30",
+        "avg_playtime": 468.3
+    },
+    {
+        "month": "Aug",
+        "price_band": "$30+",
+        "avg_playtime": 1328.5
+    },
+    {
+        "month": "Sep",
+        "price_band": "Free",
+        "avg_playtime": 130.2
+    },
+    {
+        "month": "Sep",
+        "price_band": "$0-5",
+        "avg_playtime": 40.9
+    },
+    {
+        "month": "Sep",
+        "price_band": "$5-10",
+        "avg_playtime": 57.7
+    },
+    {
+        "month": "Sep",
+        "price_band": "$10-20",
+        "avg_playtime": 154.2
+    },
+    {
+        "month": "Sep",
+        "price_band": "$20-30",
+        "avg_playtime": 402.1
+    },
+    {
+        "month": "Sep",
+        "price_band": "$30+",
+        "avg_playtime": 826.1
+    },
+    {
+        "month": "Oct",
+        "price_band": "Free",
+        "avg_playtime": 214.4
+    },
+    {
+        "month": "Oct",
+        "price_band": "$0-5",
+        "avg_playtime": 26.4
+    },
+    {
+        "month": "Oct",
+        "price_band": "$5-10",
+        "avg_playtime": 61.0
+    },
+    {
+        "month": "Oct",
+        "price_band": "$10-20",
+        "avg_playtime": 162.5
+    },
+    {
+        "month": "Oct",
+        "price_band": "$20-30",
+        "avg_playtime": 351.4
+    },
+    {
+        "month": "Oct",
+        "price_band": "$30+",
+        "avg_playtime": 598.3
+    },
+    {
+        "month": "Nov",
+        "price_band": "Free",
+        "avg_playtime": 176.4
+    },
+    {
+        "month": "Nov",
+        "price_band": "$0-5",
+        "avg_playtime": 30.8
+    },
+    {
+        "month": "Nov",
+        "price_band": "$5-10",
+        "avg_playtime": 74.3
+    },
+    {
+        "month": "Nov",
+        "price_band": "$10-20",
+        "avg_playtime": 207.9
+    },
+    {
+        "month": "Nov",
+        "price_band": "$20-30",
+        "avg_playtime": 277.3
+    },
+    {
+        "month": "Nov",
+        "price_band": "$30+",
+        "avg_playtime": 536.9
+    },
+    {
+        "month": "Dec",
+        "price_band": "Free",
+        "avg_playtime": 94.8
+    },
+    {
+        "month": "Dec",
+        "price_band": "$0-5",
+        "avg_playtime": 35.4
+    },
+    {
+        "month": "Dec",
+        "price_band": "$5-10",
+        "avg_playtime": 50.1
+    },
+    {
+        "month": "Dec",
+        "price_band": "$10-20",
+        "avg_playtime": 200.5
+    },
+    {
+        "month": "Dec",
+        "price_band": "$20-30",
+        "avg_playtime": 485.5
+    },
+    {
+        "month": "Dec",
+        "price_band": "$30+",
+        "avg_playtime": 606.8
+    }
+]

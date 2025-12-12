@@ -1,0 +1,23 @@
+[
+    {
+        "filter": "All Games",
+        "total": 83406,
+        "avg_price": 7.19,
+        "median_profit": 25286.58,
+        "avg_score": 5693.2
+    },
+    {
+        "filter": "Indie Only",
+        "total": 57950,
+        "avg_price": 6.48,
+        "median_profit": 26430.16,
+        "avg_score": 6155.8
+    },
+    {
+        "filter": "Non-Indie",
+        "total": 25456,
+        "avg_price": 8.81,
+        "median_profit": 21076.76,
+        "avg_score": 4640.2
+    }
+]

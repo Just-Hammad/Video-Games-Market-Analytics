@@ -1,0 +1,122 @@
+[
+    {
+        "primary_genre": "Action",
+        "quality": 60.98008734080972,
+        "profit": 30649.468499999995,
+        "count": 32736
+    },
+    {
+        "primary_genre": "Adventure",
+        "quality": 61.14618556956104,
+        "profit": 35071.701,
+        "count": 16346
+    },
+    {
+        "primary_genre": "Animation & Modeling",
+        "quality": 59.29960250921466,
+        "profit": 27692.483,
+        "count": 346
+    },
+    {
+        "primary_genre": "Audio Production",
+        "quality": 62.71629412434701,
+        "profit": 52865.344,
+        "count": 137
+    },
+    {
+        "primary_genre": "Casual",
+        "quality": 54.05488884969261,
+        "profit": 16547.3595,
+        "count": 15460
+    },
+    {
+        "primary_genre": "Design & Illustration",
+        "quality": 62.480651429577485,
+        "profit": 50641.514,
+        "count": 181
+    },
+    {
+        "primary_genre": "Education",
+        "quality": 55.208844582067556,
+        "profit": 15678.662999999999,
+        "count": 177
+    },
+    {
+        "primary_genre": "Free to Play",
+        "quality": 43.12257662822647,
+        "profit": 0.0,
+        "count": 1168
+    },
+    {
+        "primary_genre": "Indie",
+        "quality": 62.254067378543446,
+        "profit": 36859.172,
+        "count": 7450
+    },
+    {
+        "primary_genre": "Massively Multiplayer",
+        "quality": 43.274679894091484,
+        "profit": 0.0,
+        "count": 86
+    },
+    {
+        "primary_genre": "Nudity",
+        "quality": 59.22684968152741,
+        "profit": 18265.016,
+        "count": 61
+    },
+    {
+        "primary_genre": "RPG",
+        "quality": 59.15834163023231,
+        "profit": 79046.436,
+        "count": 1233
+    },
+    {
+        "primary_genre": "Racing",
+        "quality": 60.54408947205098,
+        "profit": 87954.489,
+        "count": 462
+    },
+    {
+        "primary_genre": "Sexual Content",
+        "quality": 65.21691796684044,
+        "profit": 19894.462,
+        "count": 108
+    },
+    {
+        "primary_genre": "Simulation",
+        "quality": 54.99426059747645,
+        "profit": 67371.57699999999,
+        "count": 1733
+    },
+    {
+        "primary_genre": "Sports",
+        "quality": 53.905388689536316,
+        "profit": 26352.963,
+        "count": 189
+    },
+    {
+        "primary_genre": "Strategy",
+        "quality": 63.595641683857735,
+        "profit": 86920.155,
+        "count": 1128
+    },
+    {
+        "primary_genre": "Unknown",
+        "quality": 1.5125276633523108,
+        "profit": 0.0,
+        "count": 3424
+    },
+    {
+        "primary_genre": "Utilities",
+        "quality": 56.497671317301865,
+        "profit": 15525.874000000002,
+        "count": 315
+    },
+    {
+        "primary_genre": "Violent",
+        "quality": 56.598126614823514,
+        "profit": 25146.107,
+        "count": 455
+    }
+]

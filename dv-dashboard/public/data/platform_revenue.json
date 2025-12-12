@@ -1,0 +1,22 @@
+[
+    {
+        "platform": "PC (Steam)",
+        "median_revenue": 1.68,
+        "strategy": "Scale-Up"
+    },
+    {
+        "platform": "Gen 8 Console",
+        "median_revenue": 1.45,
+        "strategy": "High Cost"
+    },
+    {
+        "platform": "Gen 7 Console",
+        "median_revenue": 1.25,
+        "strategy": "Legacy"
+    },
+    {
+        "platform": "Handheld",
+        "median_revenue": 0.85,
+        "strategy": "Niche"
+    }
+]

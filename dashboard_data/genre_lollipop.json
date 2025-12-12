@@ -1,0 +1,110 @@
+[
+    {
+        "genre": "Sexual Content",
+        "success_rate": 96.3,
+        "median_profit": 19894.46,
+        "count": 108
+    },
+    {
+        "genre": "Violent",
+        "success_rate": 95.2,
+        "median_profit": 25146.11,
+        "count": 455
+    },
+    {
+        "genre": "Racing",
+        "success_rate": 82.9,
+        "median_profit": 87954.49,
+        "count": 462
+    },
+    {
+        "genre": "Strategy",
+        "success_rate": 82.6,
+        "median_profit": 86920.15,
+        "count": 1128
+    },
+    {
+        "genre": "Audio Production",
+        "success_rate": 82.5,
+        "median_profit": 52865.34,
+        "count": 137
+    },
+    {
+        "genre": "Design & Illustration",
+        "success_rate": 81.8,
+        "median_profit": 50641.51,
+        "count": 181
+    },
+    {
+        "genre": "Indie",
+        "success_rate": 80.4,
+        "median_profit": 36859.17,
+        "count": 7450
+    },
+    {
+        "genre": "Animation & Modeling",
+        "success_rate": 80.1,
+        "median_profit": 27692.48,
+        "count": 346
+    },
+    {
+        "genre": "Sports",
+        "success_rate": 79.4,
+        "median_profit": 26352.96,
+        "count": 189
+    },
+    {
+        "genre": "Action",
+        "success_rate": 78.9,
+        "median_profit": 30649.47,
+        "count": 32736
+    },
+    {
+        "genre": "Simulation",
+        "success_rate": 77.0,
+        "median_profit": 67371.58,
+        "count": 1733
+    },
+    {
+        "genre": "Adventure",
+        "success_rate": 76.9,
+        "median_profit": 35071.7,
+        "count": 16346
+    },
+    {
+        "genre": "Utilities",
+        "success_rate": 76.8,
+        "median_profit": 15525.87,
+        "count": 315
+    },
+    {
+        "genre": "Education",
+        "success_rate": 74.6,
+        "median_profit": 15678.66,
+        "count": 177
+    },
+    {
+        "genre": "RPG",
+        "success_rate": 74.5,
+        "median_profit": 79046.44,
+        "count": 1233
+    },
+    {
+        "genre": "Casual",
+        "success_rate": 68.7,
+        "median_profit": 16547.36,
+        "count": 15460
+    },
+    {
+        "genre": "Free to Play",
+        "success_rate": 61.0,
+        "median_profit": 0.0,
+        "count": 1168
+    },
+    {
+        "genre": "Unknown",
+        "success_rate": 2.0,
+        "median_profit": 0.0,
+        "count": 3424
+    }
+]

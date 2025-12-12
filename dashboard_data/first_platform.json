@@ -1,0 +1,52 @@
+[
+    {
+        "platform": "NES",
+        "platform_code": "NES",
+        "avg_sales": 2.65
+    },
+    {
+        "platform": "Game Boy",
+        "platform_code": "GB",
+        "avg_sales": 2.47
+    },
+    {
+        "platform": "Xbox 360",
+        "platform_code": "X360",
+        "avg_sales": 1.74
+    },
+    {
+        "platform": "PlayStation 4",
+        "platform_code": "PS4",
+        "avg_sales": 1.69
+    },
+    {
+        "platform": "PlayStation 3",
+        "platform_code": "PS3",
+        "avg_sales": 1.28
+    },
+    {
+        "platform": "Genesis",
+        "platform_code": "GEN",
+        "avg_sales": 1.15
+    },
+    {
+        "platform": "Xbox One",
+        "platform_code": "XOne",
+        "avg_sales": 1.07
+    },
+    {
+        "platform": "Wii",
+        "platform_code": "Wii",
+        "avg_sales": 1.05
+    },
+    {
+        "platform": "Wii U",
+        "platform_code": "WiiU",
+        "avg_sales": 1.02
+    },
+    {
+        "platform": "SNES",
+        "platform_code": "SNES",
+        "avg_sales": 0.83
+    }
+]

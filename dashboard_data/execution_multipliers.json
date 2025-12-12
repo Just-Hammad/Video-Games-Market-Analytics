@@ -1,0 +1,22 @@
+[
+    {
+        "feature": "Single-player",
+        "traffic_lift": 1.0,
+        "category": "Social"
+    },
+    {
+        "feature": "Multiplayer",
+        "traffic_lift": 5.5,
+        "category": "Social"
+    },
+    {
+        "feature": "English Only",
+        "traffic_lift": 1.0,
+        "category": "Reach"
+    },
+    {
+        "feature": "Global (10+ Langs)",
+        "traffic_lift": 3.2,
+        "category": "Reach"
+    }
+]

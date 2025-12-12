@@ -1,0 +1,97 @@
+[
+    {
+        "year": 2005.0,
+        "avg_price": 8.277142857142858,
+        "median_price": 9.99
+    },
+    {
+        "year": 2006.0,
+        "avg_price": 9.467536231884058,
+        "median_price": 5.99
+    },
+    {
+        "year": 2007.0,
+        "avg_price": 6.995963302752294,
+        "median_price": 4.99
+    },
+    {
+        "year": 2008.0,
+        "avg_price": 8.725,
+        "median_price": 9.99
+    },
+    {
+        "year": 2009.0,
+        "avg_price": 9.300884955752212,
+        "median_price": 9.99
+    },
+    {
+        "year": 2010.0,
+        "avg_price": 8.144433333333334,
+        "median_price": 5.99
+    },
+    {
+        "year": 2011.0,
+        "avg_price": 9.050874125874126,
+        "median_price": 9.49
+    },
+    {
+        "year": 2012.0,
+        "avg_price": 9.26061971830986,
+        "median_price": 8.99
+    },
+    {
+        "year": 2013.0,
+        "avg_price": 10.882326530612245,
+        "median_price": 9.99
+    },
+    {
+        "year": 2014.0,
+        "avg_price": 8.667178856791642,
+        "median_price": 5.99
+    },
+    {
+        "year": 2015.0,
+        "avg_price": 7.517815877748788,
+        "median_price": 4.99
+    },
+    {
+        "year": 2016.0,
+        "avg_price": 6.967764919446335,
+        "median_price": 4.99
+    },
+    {
+        "year": 2017.0,
+        "avg_price": 6.706658760278305,
+        "median_price": 4.99
+    },
+    {
+        "year": 2018.0,
+        "avg_price": 6.2094611805045306,
+        "median_price": 2.99
+    },
+    {
+        "year": 2019.0,
+        "avg_price": 7.105825864276569,
+        "median_price": 3.99
+    },
+    {
+        "year": 2020.0,
+        "avg_price": 7.156781597258282,
+        "median_price": 3.99
+    },
+    {
+        "year": 2021.0,
+        "avg_price": 7.218929206400517,
+        "median_price": 3.99
+    },
+    {
+        "year": 2022.0,
+        "avg_price": 7.253630705394191,
+        "median_price": 4.24
+    },
+    {
+        "year": 2023.0,
+        "avg_price": 7.489626672270084,
+        "median_price": 3.99
+    }
+]

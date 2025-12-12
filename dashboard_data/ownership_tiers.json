@@ -1,0 +1,135 @@
+[
+    {
+        "year": 2005,
+        "Budget": 96.44,
+        "Standard": 0.0,
+        "Premium": 3.33,
+        "Luxury": 0.23
+    },
+    {
+        "year": 2006,
+        "Budget": 5.94,
+        "Standard": 6.51,
+        "Premium": 74.87,
+        "Luxury": 12.68
+    },
+    {
+        "year": 2007,
+        "Budget": 58.92,
+        "Standard": 17.21,
+        "Premium": 17.95,
+        "Luxury": 5.92
+    },
+    {
+        "year": 2008,
+        "Budget": 43.49,
+        "Standard": 0.0,
+        "Premium": 33.7,
+        "Luxury": 22.81
+    },
+    {
+        "year": 2009,
+        "Budget": 18.94,
+        "Standard": 0.0,
+        "Premium": 52.22,
+        "Luxury": 28.84
+    },
+    {
+        "year": 2010,
+        "Budget": 33.37,
+        "Standard": 1.69,
+        "Premium": 24.79,
+        "Luxury": 40.15
+    },
+    {
+        "year": 2011,
+        "Budget": 25.95,
+        "Standard": 0.0,
+        "Premium": 48.38,
+        "Luxury": 25.67
+    },
+    {
+        "year": 2012,
+        "Budget": 55.41,
+        "Standard": 0.84,
+        "Premium": 22.49,
+        "Luxury": 21.27
+    },
+    {
+        "year": 2013,
+        "Budget": 60.46,
+        "Standard": 11.61,
+        "Premium": 9.31,
+        "Luxury": 18.61
+    },
+    {
+        "year": 2014,
+        "Budget": 46.0,
+        "Standard": 6.24,
+        "Premium": 19.69,
+        "Luxury": 28.06
+    },
+    {
+        "year": 2015,
+        "Budget": 45.55,
+        "Standard": 9.68,
+        "Premium": 9.15,
+        "Luxury": 35.61
+    },
+    {
+        "year": 2016,
+        "Budget": 40.19,
+        "Standard": 12.87,
+        "Premium": 6.75,
+        "Luxury": 40.19
+    },
+    {
+        "year": 2017,
+        "Budget": 58.23,
+        "Standard": 6.93,
+        "Premium": 7.3,
+        "Luxury": 27.54
+    },
+    {
+        "year": 2018,
+        "Budget": 36.91,
+        "Standard": 16.59,
+        "Premium": 7.28,
+        "Luxury": 39.21
+    },
+    {
+        "year": 2019,
+        "Budget": 47.84,
+        "Standard": 9.24,
+        "Premium": 10.01,
+        "Luxury": 32.91
+    },
+    {
+        "year": 2020,
+        "Budget": 37.12,
+        "Standard": 9.95,
+        "Premium": 14.74,
+        "Luxury": 38.19
+    },
+    {
+        "year": 2021,
+        "Budget": 26.69,
+        "Standard": 11.1,
+        "Premium": 10.49,
+        "Luxury": 51.72
+    },
+    {
+        "year": 2022,
+        "Budget": 31.97,
+        "Standard": 13.43,
+        "Premium": 13.61,
+        "Luxury": 40.99
+    },
+    {
+        "year": 2023,
+        "Budget": 17.54,
+        "Standard": 21.26,
+        "Premium": 20.57,
+        "Luxury": 40.63
+    }
+]
