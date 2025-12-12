@@ -1,0 +1,26 @@
+[
+    {
+        "quarter": "Q1",
+        "traffic": 120,
+        "competition": 20,
+        "recommendation": "Best Window"
+    },
+    {
+        "quarter": "Q2",
+        "traffic": 90,
+        "competition": 40,
+        "recommendation": "Neutral"
+    },
+    {
+        "quarter": "Q3",
+        "traffic": 95,
+        "competition": 40,
+        "recommendation": "Neutral"
+    },
+    {
+        "quarter": "Q4",
+        "traffic": 150,
+        "competition": 100,
+        "recommendation": "Danger Zone"
+    }
+]

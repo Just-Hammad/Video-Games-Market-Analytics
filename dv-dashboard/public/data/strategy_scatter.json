@@ -1,0 +1,3002 @@
+[
+    {
+        "Name": "Destiny",
+        "Release_Span": 0.0,
+        "Total_Sales": 12.61,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "NHL 2004",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.25,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Sacred 3",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.19999999999999998,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Harry Potter and the Deathly Hallows - Part 2",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.37,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "Yaiba: Ninja Gaiden Z",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.15000000000000002,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Brothers In Arms: Road to Hill 30",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.12,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Commando",
+        "Release_Span": 1.0,
+        "Total_Sales": 1.6099999999999999,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "London 2012: The Official Video Game of the Olympic Games",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.29,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "G.I. Joe: The Rise of Cobra",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.09,
+        "Platform_Count": 6
+    },
+    {
+        "Name": "Spartan: Total Warrior",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.42000000000000004,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "MVP Baseball 2005",
+        "Release_Span": 0.0,
+        "Total_Sales": 2.81,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Lego Batman 3: Beyond Gotham",
+        "Release_Span": 0.0,
+        "Total_Sales": 4.58,
+        "Platform_Count": 8
+    },
+    {
+        "Name": "Malice",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.03,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Colin McRae Rally 04",
+        "Release_Span": 1.0,
+        "Total_Sales": 1.05,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Lords of the Fallen",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.76,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Spider-Man: Edge of Time",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.8300000000000001,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "Hitman 2: Silent Assassin",
+        "Release_Span": 1.0,
+        "Total_Sales": 3.09,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Utawarerumono: Itsuwari no Kamen",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.18,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "WWE 2K14",
+        "Release_Span": 0.0,
+        "Total_Sales": 2.32,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Dead Space 2",
+        "Release_Span": 0.0,
+        "Total_Sales": 3.29,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "NHL 15",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.83,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Stranglehold",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.1199999999999999,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Legend of the Guardians: The Owls of Ga'Hoole",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.43000000000000005,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Torino 2006",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.17,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Dragon Ball Z: Budokai",
+        "Release_Span": 1.0,
+        "Total_Sales": 3.78,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Surf's Up",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.0,
+        "Platform_Count": 7
+    },
+    {
+        "Name": "Dragon Ball: Raging Blast 2",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.47,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Madden NFL 25",
+        "Release_Span": 0.0,
+        "Total_Sales": 5.54,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Street Fighter Alpha 3",
+        "Release_Span": 4.0,
+        "Total_Sales": 1.18,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Polaris SnoCross",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.22,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Teenage Mutant Ninja Turtles 3: Mutant Nightmare",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.42,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Winning Post 8",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.09,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "The Club",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.5,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "NASCAR Thunder 2002",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.91,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Dancing on Ice",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.12000000000000001,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Disney Sports Football",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.04,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "The Fairly Odd Parents: Shadow Showdown",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.89,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Rock Band Track Pack: Classic Rock",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.61,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "F.E.A.R. 3",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.06,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Classic Road",
+        "Release_Span": 2.0,
+        "Total_Sales": 0.18,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Ape Escape",
+        "Release_Span": 11.0,
+        "Total_Sales": 1.68,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Max & the Magic Marker",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.1,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "NASCAR '14",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.26,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "NBA 2K15",
+        "Release_Span": 0.0,
+        "Total_Sales": 7.06,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Backyard Baseball '10",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.4,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Toukiden: The Age of Demons",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.56,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Higurashi no Naku Koro ni Iki",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.04,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Superman Returns",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.35000000000000003,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Sphinx and the Cursed Mummy",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.71,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "DmC: Devil May Cry",
+        "Release_Span": 2.0,
+        "Total_Sales": 1.69,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Fatal Frame",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.2,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "The Sum of All Fears",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.07,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Street Fighter Collection",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.21000000000000002,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Supreme Commander",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.14,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "The Godfather (JP sales)",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.48,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Ben 10: Protector of Earth",
+        "Release_Span": 0.0,
+        "Total_Sales": 4.49,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Anarchy Reigns",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.38,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Guitar Hero: Warriors of Rock",
+        "Release_Span": 0.0,
+        "Total_Sales": 2.7,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Top Gun: Combat Zones",
+        "Release_Span": 3.0,
+        "Total_Sales": 1.17,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Senran Kagura: Estival Versus",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.4,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Destiny: The Collection",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.1,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Hatsune Miku: Project Diva X",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.16,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Bratz: Forever Diamondz",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.7,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "WWF Attitude",
+        "Release_Span": 1.0,
+        "Total_Sales": 2.4699999999999998,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Prince of Persia: Rival Swords",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.41,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Burger Island",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.31,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Freekstyle",
+        "Release_Span": 1.0,
+        "Total_Sales": 1.1600000000000001,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Crash Nitro Kart",
+        "Release_Span": 0.0,
+        "Total_Sales": 2.98,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Batman Begins",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.09,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "MTV Music Generator 3: This Is the Remix",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.22000000000000003,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "SimCity",
+        "Release_Span": 3.0,
+        "Total_Sales": 2.01,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Pro Yaky? Spirits 5",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.29,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Tornado Outbreak",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.28,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "World Championship Pool 2004",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.09,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Man vs. Wild",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.26,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "X-Men vs. Street Fighter",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.6799999999999999,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Saints Row 2",
+        "Release_Span": 1.0,
+        "Total_Sales": 4.76,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Injustice: Gods Among Us",
+        "Release_Span": 0.0,
+        "Total_Sales": 3.87,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "College Hoops 2K8",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.6699999999999999,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "NCAA Football 11",
+        "Release_Span": 0.0,
+        "Total_Sales": 2.14,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Digimon Story: Cyber Sleuth",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.28,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Tom Clancy's Ghost Recon 2",
+        "Release_Span": 1.0,
+        "Total_Sales": 2.5100000000000002,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Pro Evolution Soccer 2013",
+        "Release_Span": 0.0,
+        "Total_Sales": 2.52,
+        "Platform_Count": 6
+    },
+    {
+        "Name": "Hasbro Family Game Night",
+        "Release_Span": 1.0,
+        "Total_Sales": 2.2399999999999998,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Gauntlet: Dark Legacy",
+        "Release_Span": 1.0,
+        "Total_Sales": 1.5,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Major League Baseball 2K7",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.66,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Mega Man X4",
+        "Release_Span": 1.0,
+        "Total_Sales": 1.11,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Manhunt",
+        "Release_Span": 1.0,
+        "Total_Sales": 1.47,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Adventure Time: Finn & Jake Investigations",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.45,
+        "Platform_Count": 6
+    },
+    {
+        "Name": "The Powerpuff Girls: Relish Rampage",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.52,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "MotoGP 15",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.28,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "SeaWorld Adventure Parks: Shamu's Deep Sea Adventure",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.39,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "ModNation Racers",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.67,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Grease Dance",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.24,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Medal of Honor: Frontline",
+        "Release_Span": 0.0,
+        "Total_Sales": 8.91,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Max Payne 3",
+        "Release_Span": 0.0,
+        "Total_Sales": 3.9899999999999998,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Bladestorm: The Hundred Years' War",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.39,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Crazy Taxi",
+        "Release_Span": 1.0,
+        "Total_Sales": 4.82,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Armored Core 4",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.45,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Alan Wake",
+        "Release_Span": 2.0,
+        "Total_Sales": 1.4200000000000002,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Cabela's Survival: Shadows of Katmai",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.59,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "SNK vs. Capcom: The Match of the Millennium",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.6,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Nobunaga's Ambition: Sphere of Influence",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.09,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Medal of Honor: Vanguard",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.13,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Tales of Berseria",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.33,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Doom 3 BFG Edition",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.1099999999999999,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "NHL Hitz 20-03",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.47000000000000003,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "UFC Personal Trainer: The Ultimate Fitness System",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.1800000000000002,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Popeye",
+        "Release_Span": 1.0,
+        "Total_Sales": 1.6400000000000001,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Glover",
+        "Release_Span": 1.0,
+        "Total_Sales": 1.08,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Burnout Paradise",
+        "Release_Span": 0.0,
+        "Total_Sales": 3.33,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "NCAA College Basketball 2K3",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.38,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Command & Conquer 3: Kane's Wrath",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.26,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Fantastic 4",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.01,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Resident Evil 6",
+        "Release_Span": 4.0,
+        "Total_Sales": 5.28,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "Far Cry 4",
+        "Release_Span": 0.0,
+        "Total_Sales": 8.68,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "Battlefield: Bad Company",
+        "Release_Span": 0.0,
+        "Total_Sales": 2.81,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Titanfall",
+        "Release_Span": 0.0,
+        "Total_Sales": 4.859999999999999,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Virtua Tennis 2009",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.09,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "X-Blades",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.28,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Battlefield: Hardline",
+        "Release_Span": 0.0,
+        "Total_Sales": 4.26,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "DiRT 2",
+        "Release_Span": 0.0,
+        "Total_Sales": 2.7,
+        "Platform_Count": 6
+    },
+    {
+        "Name": "TimeSplitters: Future Perfect",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.48,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Tom Clancy's Ghost Recon Advanced Warfighter",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.87,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Grand Theft Auto III",
+        "Release_Span": 1.0,
+        "Total_Sales": 13.11,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "FlatOut: Ultimate Carnage",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.12,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "One Piece: Romance Dawn - Bouken no Yoake",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.4,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Professor Heinz Wolff's Gravity",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.22000000000000003,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Wipeout: The Game",
+        "Release_Span": 1.0,
+        "Total_Sales": 2.71,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Need for Speed: Hot Pursuit 2",
+        "Release_Span": 0.0,
+        "Total_Sales": 3.73,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Neon Genesis Evangelion",
+        "Release_Span": 3.0,
+        "Total_Sales": 0.5,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Silent Scope",
+        "Release_Span": 2.0,
+        "Total_Sales": 0.41000000000000003,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Earth Defense Force 2: Invaders from Planet Space",
+        "Release_Span": 3.0,
+        "Total_Sales": 0.25,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "American Chopper 2: Full Throttle",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.27999999999999997,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "NHL 12",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.29,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Burnout Revenge",
+        "Release_Span": 1.0,
+        "Total_Sales": 1.94,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Dragon Ball Z: Sagas",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.91,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "All Star Cheer Squad",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.08,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "NBA Hoopz",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.31,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "LEGO Marvel Super Heroes",
+        "Release_Span": 0.0,
+        "Total_Sales": 9.86,
+        "Platform_Count": 9
+    },
+    {
+        "Name": "Samurai Warriors 2: Empires",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.23,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Madden NFL 16",
+        "Release_Span": 0.0,
+        "Total_Sales": 7.42,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Showtime Championship Boxing",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.13,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Harry Potter and the Goblet of Fire",
+        "Release_Span": 0.0,
+        "Total_Sales": 2.35,
+        "Platform_Count": 6
+    },
+    {
+        "Name": "Ride",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.45,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "Destroy All Humans!",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.4,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Ice Hockey",
+        "Release_Span": 8.0,
+        "Total_Sales": 2.91,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Atelier Ayesha: The Alchemist of Dusk",
+        "Release_Span": 2.0,
+        "Total_Sales": 0.32,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Project CARS",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.3800000000000001,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Madden NFL 10",
+        "Release_Span": 0.0,
+        "Total_Sales": 7.57,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "NHL 2K9",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.5,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Command & Conquer 3: Tiberium Wars",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.5,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Raven Squad: Operation Hidden Dagger",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.09999999999999999,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Fist of the North Star: Ken's Rage 2",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.38,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "PaRappa The Rapper",
+        "Release_Span": 10.0,
+        "Total_Sales": 2.06,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Crash Bandicoot: The Wrath of Cortex",
+        "Release_Span": 1.0,
+        "Total_Sales": 7.24,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Winter Sports 3: The Great Tournament",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.11,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Kiniro no Corda 3",
+        "Release_Span": 5.0,
+        "Total_Sales": 0.13,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "NASCAR 08",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.76,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "The Warriors",
+        "Release_Span": 2.0,
+        "Total_Sales": 1.09,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Madden NFL 2003",
+        "Release_Span": 0.0,
+        "Total_Sales": 5.89,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Disney's Winnie the Pooh's Rumbly Tumbly Adventure",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.33,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Street Fighter Anniversary Collection",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.81,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Shrek Smash n' Crash Racing",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.22,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "The Price is Right 2010 Edition",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.37,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "MindJack",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.28,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Spider-Man: The Movie",
+        "Release_Span": 0.0,
+        "Total_Sales": 8.4,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Hitman: Absolution",
+        "Release_Span": 0.0,
+        "Total_Sales": 4.2,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Dead Space",
+        "Release_Span": 0.0,
+        "Total_Sales": 4.03,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Spider-Man: Web of Shadows",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.26,
+        "Platform_Count": 6
+    },
+    {
+        "Name": "The Testament of Sherlock Holmes",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.35000000000000003,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Final Fantasy XIII",
+        "Release_Span": 1.0,
+        "Total_Sales": 7.53,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Reign of Fire",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.53,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Ninja Gaiden 3",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.88,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "My Horse & Me",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.6799999999999999,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "LEGO Batman: The Videogame",
+        "Release_Span": 0.0,
+        "Total_Sales": 9.18,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "Alter Echo",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.18,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "NFL GameDay 2002",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.78,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "The History Channel: Battle for the Pacific",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.24,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Pump It Up: Exceed",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.08,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Conflict: Denied Ops",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.39,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Mafia II",
+        "Release_Span": 0.0,
+        "Total_Sales": 3.47,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "MLB 11: The Show",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.87,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "LEGO Batman 2: DC Super Heroes",
+        "Release_Span": 1.0,
+        "Total_Sales": 6.37,
+        "Platform_Count": 7
+    },
+    {
+        "Name": "Monster High: Ghoul Spirit",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.52,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Turbo: Super Stunt Squad",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.13,
+        "Platform_Count": 6
+    },
+    {
+        "Name": "Black & Bruised",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.21000000000000002,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "SpongeBob SquarePants: Lights, Camera, Pants!",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.65,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Zumba Fitness",
+        "Release_Span": 0.0,
+        "Total_Sales": 9.79,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "World Championship Poker 2: Featuring Howard Lederer",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.5700000000000001,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Iron Chef America: Supreme Cuisine",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.36,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Need for Speed Underground 2",
+        "Release_Span": 1.0,
+        "Total_Sales": 10.97,
+        "Platform_Count": 6
+    },
+    {
+        "Name": "Resident Evil: Revelations 2",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.1800000000000002,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "Ace Combat: Assault Horizon",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.23,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Monster High 13 Wishes",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.05,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "The Polar Express",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.53,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Juiced 2: Hot Import Nights",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.9,
+        "Platform_Count": 6
+    },
+    {
+        "Name": "Spy Hunter",
+        "Release_Span": 1.0,
+        "Total_Sales": 2.21,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Resident Evil 4 HD",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.04,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Mercenaries: Playground of Destruction",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.44,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Karaoke Revolution Party",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.44,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Cabela's Outdoor Adventures",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.13,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Battle Fantasia",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.09999999999999999,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Tak and the Guardians of Gross",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.44000000000000006,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Barnyard",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.3,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "WinBack: Covert Operations",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.5,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Sniper Elite 3",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.6400000000000001,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Akiba's Trip: Undead & Undressed",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.43,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Arctic Thunder",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.48,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Catherine",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.04,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "NBA Live 09",
+        "Release_Span": 0.0,
+        "Total_Sales": 2.01,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Karaoke Revolution Glee: Volume 3",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.44,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "TOCA Race Driver 3",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.13,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Ultimate Board Game Collection",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.23,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "NBA 2K3",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.53,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Harvey Birdman: Attorney at Law",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.3,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Generator Rex: Agent of Providence",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.39,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "Catwoman",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.34,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "The Peanuts Movie: Snoopy's Grand Adventure",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.09,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Rock of the Dead",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.1,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "DuckTales: Remastered",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.17,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Speed Kings",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.16,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "WRC 5: FIA World Rally Championship",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.28,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "Killer7",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.24,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Tomb Raider: The Last Revelation",
+        "Release_Span": 0.0,
+        "Total_Sales": 2.89,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Backyard Sports: Sandlot Sluggers",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.4,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Pro Yaky? Spirits 6",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.28,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Countdown: The Game",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.2,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "MLB 15: The Show",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.35,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Conflict: Desert Storm II - Back to Bagdhad",
+        "Release_Span": 1.0,
+        "Total_Sales": 1.09,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Avatar: The Last Airbender",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.23,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Disney Infinity 3.0",
+        "Release_Span": 0.0,
+        "Total_Sales": 2.34,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "Alias",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.16,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "The Lord of the Rings: The Battle for Middle-Earth II",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.08,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Razor Freestyle Scooter",
+        "Release_Span": 2.0,
+        "Total_Sales": 0.47000000000000003,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Just Dance 2014",
+        "Release_Span": 0.0,
+        "Total_Sales": 6.58,
+        "Platform_Count": 6
+    },
+    {
+        "Name": "Eternal Sonata",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.78,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Sengoku Basara 2 Heroes",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.21000000000000002,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "The Amazing Spider-Man (Console Version)",
+        "Release_Span": 1.0,
+        "Total_Sales": 2.23,
+        "Platform_Count": 6
+    },
+    {
+        "Name": "Red Dead Revolver",
+        "Release_Span": 0.0,
+        "Total_Sales": 2.0,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Toukiden Kiwami",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.52,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Salt Lake 2002",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.2,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "NASCAR Heat 2002",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.96,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "NASCAR Thunder 2004",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.31,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Jillian Michaels Fitness Ultimatum 2010",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.6499999999999999,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Binary Domain",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.52,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Tropico 5",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.49,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Hot Wheels: Beat That!",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.9500000000000001,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Monster High: New Ghoul in School",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.18,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Dark Sector",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.95,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Harry Potter and the Chamber of Secrets",
+        "Release_Span": 0.0,
+        "Total_Sales": 7.64,
+        "Platform_Count": 6
+    },
+    {
+        "Name": "Call of Duty: Black Ops",
+        "Release_Span": 0.0,
+        "Total_Sales": 29.400000000000002,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Bass Pro Shops: The Hunt",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.32999999999999996,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Batman: Arkham Asylum",
+        "Release_Span": 0.0,
+        "Total_Sales": 8.07,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Star Wars: Battlefront II",
+        "Release_Span": 0.0,
+        "Total_Sales": 6.67,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Disney's PK: Out of the Shadows",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.16999999999999998,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Sonic Riders",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.55,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Thrillville: Off the Rails",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.18,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "Shrek's Carnival Craze Party Games",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.62,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Bad Boys: Miami Takedown",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.38,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "The King of Fighters XIII",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.64,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Cabela's North American Adventures",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.59,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "WWE SmackDown vs. Raw 2011",
+        "Release_Span": 0.0,
+        "Total_Sales": 3.54,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "Petz: Horsez 2",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.13,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Cars 2",
+        "Release_Span": 0.0,
+        "Total_Sales": 3.66,
+        "Platform_Count": 6
+    },
+    {
+        "Name": "Fight Night Champion",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.95,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Bodycount",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.22999999999999998,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "South Park",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.8499999999999999,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Super Robot Taisen F Kanketsuhen",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.78,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Castlevania: Lords of Shadow 2",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.36,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Nickelodeon Dance",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.37,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "BloodRayne 2",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.42000000000000004,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Disney Sing It: Pop Hits",
+        "Release_Span": 0.0,
+        "Total_Sales": 2.09,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Fast & Furious: Showdown",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.08,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Totally Spies! Totally Party",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.15,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Barbie: Groom and Glam Pups",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.66,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Harry Potter: Quidditch World Cup",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.8800000000000001,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Rayman 3: Hoodlum Havoc",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.45999999999999996,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Wolfenstein: The New Order",
+        "Release_Span": 0.0,
+        "Total_Sales": 3.63,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "Dynasty Warriors: Gundam 2",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.03,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Avatar: The Last Airbender - Into the Inferno",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.5700000000000001,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Karaoke Revolution Presents American Idol Encore",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.04,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Top Gun: Hard Lock",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.09,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "ICO",
+        "Release_Span": 10.0,
+        "Total_Sales": 0.53,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "MVP 06 NCAA Baseball",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.09,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "FIFA 12",
+        "Release_Span": 0.0,
+        "Total_Sales": 13.15,
+        "Platform_Count": 7
+    },
+    {
+        "Name": "F.E.A.R.",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.8900000000000001,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Dark Souls III",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.96,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Warriors Orochi 3",
+        "Release_Span": 3.0,
+        "Total_Sales": 1.15,
+        "Platform_Count": 6
+    },
+    {
+        "Name": "Natsuiro High School: Seishun Hakusho",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.04,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Golden Axe: Beast Rider",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.65,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Ben 10: Alien Force",
+        "Release_Span": 0.0,
+        "Total_Sales": 2.92,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Road Rash: Jailbreak",
+        "Release_Span": 4.0,
+        "Total_Sales": 0.5,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Wacky Races: Crash & Dash",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.51,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Cabela's Deer Hunt 2005 Season",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.48,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Grand Theft Auto V",
+        "Release_Span": 2.0,
+        "Total_Sales": 55.92,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "Real World Golf",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.14,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Steins;Gate: Senkei Kousoku no Phonogram",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.08,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Monster Hunter Tri",
+        "Release_Span": 3.0,
+        "Total_Sales": 5.76,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Evolution Skateboarding",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.3,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "San Francisco Rush: Extreme Racing",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.13,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Grease",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.6799999999999999,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "High Rollers Casino",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.55,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Gauntlet Legends",
+        "Release_Span": 1.0,
+        "Total_Sales": 1.01,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Jikkyou Powerful Pro Yakyuu 15",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.32,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "The Saboteur",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.07,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Hot Wheels Velocity X",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.74,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Knights Contract",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.16999999999999998,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Nightmare Creatures",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.89,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Summer Athletics: The Ultimate Challenge",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.21,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Battlestations: Pacific",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.36,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Ragnarok Odyssey",
+        "Release_Span": 2.0,
+        "Total_Sales": 0.45999999999999996,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Military History: Commander - Europe at War",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.03,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Bulletstorm",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.71,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Blazing Angels 2: Secret Missions of WWII",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.29000000000000004,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Stuntman: Ignition",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.44,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "James Bond 007: Everything or Nothing",
+        "Release_Span": 1.0,
+        "Total_Sales": 3.54,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Whiplash",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.19,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Marvel vs. Capcom 2: New Age of Heroes",
+        "Release_Span": 2.0,
+        "Total_Sales": 1.04,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Dishonored",
+        "Release_Span": 3.0,
+        "Total_Sales": 4.3,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "Tomb Raider (2013)",
+        "Release_Span": 1.0,
+        "Total_Sales": 6.4399999999999995,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "ShellShock 2: Blood Trails",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.16999999999999998,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "SimCity 2000",
+        "Release_Span": 11.0,
+        "Total_Sales": 4.24,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "Resident Evil - Code: Veronica X",
+        "Release_Span": 2.0,
+        "Total_Sales": 2.4,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Super Mario World 2: Yoshi's Island",
+        "Release_Span": 7.0,
+        "Total_Sales": 7.03,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Puyo Pop Fever",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.05,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "SpongeBob's Surf & Skate Roadtrip",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.32,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Teenage Mutant Ninja Turtles: Smash-Up",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.57,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "World Series of Poker",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.98,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Life is Strange",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.52,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Sniper Elite V2",
+        "Release_Span": 1.0,
+        "Total_Sales": 1.8499999999999999,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Army of Two: The 40th Day",
+        "Release_Span": 0.0,
+        "Total_Sales": 2.12,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Rock Band 4",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.8,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Dancing with the Stars: We Dance!",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.78,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Eat Lead: The Return of Matt Hazard",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.26,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Def Jam: Fight for NY",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.98,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Winter Sports 2011",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.15,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Sangoku Koi Senki: Otome no Heihou!",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.05,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "BioShock The Collection",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.28,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Birds of Steel",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.41000000000000003,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "NBA Ballers",
+        "Release_Span": 0.0,
+        "Total_Sales": 2.17,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Kingdom Hearts II",
+        "Release_Span": 9.0,
+        "Total_Sales": 5.65,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Assassin's Creed II",
+        "Release_Span": 1.0,
+        "Total_Sales": 11.41,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Aliens in the Attic",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.13,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "NBA 2K13",
+        "Release_Span": 0.0,
+        "Total_Sales": 6.1,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "The Simpsons: Hit & Run",
+        "Release_Span": 0.0,
+        "Total_Sales": 7.04,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Naruto Shippuden: Ultimate Ninja Storm 2",
+        "Release_Span": 0.0,
+        "Total_Sales": 2.01,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Transformers: Revenge of the Fallen (XBox 360, PS3, & PC Versions)",
+        "Release_Span": 0.0,
+        "Total_Sales": 2.7399999999999998,
+        "Platform_Count": 6
+    },
+    {
+        "Name": "Tiger Woods PGA Tour 10",
+        "Release_Span": 0.0,
+        "Total_Sales": 3.0300000000000002,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "Winning Post 7 2013",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.07,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Chrono Trigger",
+        "Release_Span": 13.0,
+        "Total_Sales": 3.7800000000000002,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "National Geographic Challenge!",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.16,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Metal Slug 4 & 5",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.15,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Dark Souls II",
+        "Release_Span": 1.0,
+        "Total_Sales": 3.0700000000000003,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "Def Jam Icon",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.78,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "The Sims 2: Pets",
+        "Release_Span": 1.0,
+        "Total_Sales": 3.98,
+        "Platform_Count": 6
+    },
+    {
+        "Name": "Rayman Raving Rabbids",
+        "Release_Span": 1.0,
+        "Total_Sales": 1.81,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "TimeShift",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.58,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Hummer Badlands",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.07,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Ty the Tasmanian Tiger",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.6199999999999999,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Beowulf: The Game",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.65,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "The Witcher 2: Assassins of Kings",
+        "Release_Span": 1.0,
+        "Total_Sales": 1.9,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Xenoblade Chronicles",
+        "Release_Span": 5.0,
+        "Total_Sales": 1.54,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "PDC World Championship Darts: Pro Tour",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.24,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Soccer Tsuku: Pro Soccer Club o Tsukurou!",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.2,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "College Hoops 2K7",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.39,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Crysis 2",
+        "Release_Span": 0.0,
+        "Total_Sales": 3.39,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Diva Girls: Divas on Ice",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.14,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Persona 2: Eternal Punishment",
+        "Release_Span": 12.0,
+        "Total_Sales": 0.39999999999999997,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Big Mutha Truckers 2",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.27,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Rockstar Games presents Table Tennis",
+        "Release_Span": 1.0,
+        "Total_Sales": 2.0300000000000002,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Turning Point: Fall of Liberty",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.54,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Pimp My Ride",
+        "Release_Span": 2.0,
+        "Total_Sales": 0.22,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Zoo Hospital",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.21000000000000002,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Pro Yaky? Spirits 2013",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.46,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Super Bust-A-Move",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.39,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Crash: Mind Over Mutant",
+        "Release_Span": 0.0,
+        "Total_Sales": 2.3,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "Thor: God of Thunder",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.69,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "Dead to Rights II",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.31,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Disney's DuckTales",
+        "Release_Span": 1.0,
+        "Total_Sales": 3.0999999999999996,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "NBA Live 2000",
+        "Release_Span": 1.0,
+        "Total_Sales": 1.96,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Lost Dimension",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.22000000000000003,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Sea Monsters: A Prehistoric Adventure",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.060000000000000005,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Nobunaga no Yabou: Souzou",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.25,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "LEGO Jurassic World",
+        "Release_Span": 0.0,
+        "Total_Sales": 4.98,
+        "Platform_Count": 8
+    },
+    {
+        "Name": "Gotouchi Tetsudou: Gotouchi Chara to Nihon Zenkoku no Tabi",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.15,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "WipeOut 3 The Game",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.9400000000000001,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Kane & Lynch: Dead Men",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.52,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Escape Dead Island",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.16999999999999998,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Final Fantasy V",
+        "Release_Span": 6.0,
+        "Total_Sales": 2.62,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "World Championship Poker",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.63,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Indigo Prophecy",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.27,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Super Mario Bros. 3",
+        "Release_Span": 15.0,
+        "Total_Sales": 22.48,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Bratz: Rock Angelz",
+        "Release_Span": 1.0,
+        "Total_Sales": 1.12,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "MLB 09: The Show",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.31,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Army Men: Soldiers of Misfortune",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.25,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Tomb Raider: Underworld",
+        "Release_Span": 1.0,
+        "Total_Sales": 3.29,
+        "Platform_Count": 6
+    },
+    {
+        "Name": "Bomberman",
+        "Release_Span": 23.0,
+        "Total_Sales": 1.35,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Armorines: Project S.W.A.R.M.",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.34,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Blood Drive",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.18,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Wallace & Gromit: Curse of the Were-Rabbit",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.13,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Sudoku Ball Detective",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.1,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Rayman Legends",
+        "Release_Span": 1.0,
+        "Total_Sales": 3.36,
+        "Platform_Count": 6
+    },
+    {
+        "Name": "Guitar Hero Live",
+        "Release_Span": 0.0,
+        "Total_Sales": 2.02,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "Super Mario World",
+        "Release_Span": 11.0,
+        "Total_Sales": 26.07,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Rayman Arena",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.74,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Monopoly",
+        "Release_Span": 16.0,
+        "Total_Sales": 7.7,
+        "Platform_Count": 8
+    },
+    {
+        "Name": "Guilty Gear XX Accent Core Plus",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.16999999999999998,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Tony Hawk's Proving Ground",
+        "Release_Span": 0.0,
+        "Total_Sales": 2.15,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "Way of the Samurai 3",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.73,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "SplashDown",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.8099999999999999,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "The Suffering",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.64,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Dawn of Discovery",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.72,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Final Fantasy XIV: A Realm Reborn",
+        "Release_Span": 4.0,
+        "Total_Sales": 3.34,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "SingStar Queen",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.08,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Hannah Montana: The Movie",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.49,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "NCAA Final Four 2001",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.35,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Superman: Shadow of Apokolips",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.5,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Need for Speed: Nitro",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.24,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Guitar Hero: Van Halen",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.97,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Rayman Origins",
+        "Release_Span": 1.0,
+        "Total_Sales": 3.22,
+        "Platform_Count": 6
+    },
+    {
+        "Name": "The Incredibles: Rise of the Underminer",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.18,
+        "Platform_Count": 6
+    },
+    {
+        "Name": "Final Fantasy XI: Wings of the Goddess",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.11,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Sesame Street: Elmo's A-to-Zoo Adventure",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.7200000000000001,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Hellboy: The Science of Evil",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.32,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "The Legend of Heroes: Trails in the Sky Third Chapter",
+        "Release_Span": 8.0,
+        "Total_Sales": 0.1,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Enchanted Arms",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.39,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "NHL 2002",
+        "Release_Span": 1.0,
+        "Total_Sales": 1.5899999999999999,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Divinity: Original Sin",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.36000000000000004,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "DJ Hero 2",
+        "Release_Span": 0.0,
+        "Total_Sales": 2.2,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Super Street Fighter II",
+        "Release_Span": 0.0,
+        "Total_Sales": 2.15,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Dragon Quest Monsters 2",
+        "Release_Span": 13.0,
+        "Total_Sales": 2.35,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Frogger's Adventures: The Rescue",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.47,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "NFL Blitz 20-02",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.46,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Activision Anthology",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.55,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "SpongeBob SquarePants: Revenge of the Flying Dutchman",
+        "Release_Span": 0.0,
+        "Total_Sales": 2.47,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Jikkyou Powerful Major League 2009",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.12,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Yakuza",
+        "Release_Span": 7.0,
+        "Total_Sales": 0.91,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "NBA 2K2",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.54,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Tony Hawk's Pro Skater 3",
+        "Release_Span": 1.0,
+        "Total_Sales": 8.05,
+        "Platform_Count": 6
+    },
+    {
+        "Name": "Romance of the Three Kingdoms II",
+        "Release_Span": 24.0,
+        "Total_Sales": 0.28,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Rocket Power: Beach Bandits",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.33,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Amagami",
+        "Release_Span": 5.0,
+        "Total_Sales": 0.32,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "L.A. Noire",
+        "Release_Span": 0.0,
+        "Total_Sales": 5.95,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Rubik's World",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.27,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "DiRT Showdown",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.43,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Winter Sports 2: The Next Challenge",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.62,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "No More Heroes: Heroes' Paradise",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.22,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Inversion",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.13,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "NFL Head Coach",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.5700000000000001,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Hyperdimension Neptunia",
+        "Release_Span": 3.0,
+        "Total_Sales": 0.64,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Don Bradman Cricket 14",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.19,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Just Dance: Disney Party 2",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.22000000000000003,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Freaky Flyers",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.13,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "XIII",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.9099999999999999,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Blades of Time",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.21000000000000002,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Dark Summit",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.36,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Dead to Rights: Retribution",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.49,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Assassin's Creed",
+        "Release_Span": 1.0,
+        "Total_Sales": 11.3,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Sherlock Holmes: Crimes & Punishments",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.54,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "The Fairly Odd Parents: Breakin Da Rules",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.78,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Ultimate Spider-Man",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.94,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "Barbie Horse Adventures: Riding Camp",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.9400000000000001,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Trivial Pursuit unhinged",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.28,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Cabela's Big Game Hunter (2008)",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.89,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Blood Omen 2",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.63,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Skylanders SWAP Force",
+        "Release_Span": 0.0,
+        "Total_Sales": 6.26,
+        "Platform_Count": 7
+    },
+    {
+        "Name": "Mass Effect 2",
+        "Release_Span": 1.0,
+        "Total_Sales": 4.99,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Mortal Kombat Trilogy",
+        "Release_Span": 0.0,
+        "Total_Sales": 3.75,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Marvel: Ultimate Alliance",
+        "Release_Span": 0.0,
+        "Total_Sales": 4.5,
+        "Platform_Count": 6
+    },
+    {
+        "Name": "Star Wars Knights of the Old Republic II: The Sith Lords",
+        "Release_Span": 1.0,
+        "Total_Sales": 1.4300000000000002,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Operation Flashpoint: Dragon Rising",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.9000000000000001,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Ford Mustang: The Legend Lives",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.38,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Pro Yaky? Spirits 2011",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.49,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "NCAA March Madness 06",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.73,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Frogger: Helmet Chaos",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.16999999999999998,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Full Spectrum Warrior: Ten Hammers",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.12000000000000001,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Onechanbara Z Kagura",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.06,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "The Legend of Heroes: Trails of Cold Steel",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.53,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Gundam Breaker",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.35,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "SpongeBob SquarePants: SuperSponge",
+        "Release_Span": 0.0,
+        "Total_Sales": 2.33,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Spawn: Armageddon",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.68,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Game of Thrones",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.59,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Sacred 2: Fallen Angel",
+        "Release_Span": 1.0,
+        "Total_Sales": 1.2200000000000002,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Crash of the Titans",
+        "Release_Span": 0.0,
+        "Total_Sales": 2.32,
+        "Platform_Count": 5
+    },
+    {
+        "Name": "World Soccer Winning Eleven 9",
+        "Release_Span": 0.0,
+        "Total_Sales": 4.5,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Earth Defense Force 2025",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.51,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Star Wars: Clone Wars",
+        "Release_Span": 1.0,
+        "Total_Sales": 1.03,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Super Bubble Pop",
+        "Release_Span": 1.0,
+        "Total_Sales": 0.060000000000000005,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Dark Souls",
+        "Release_Span": 1.0,
+        "Total_Sales": 3.1399999999999997,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "SSX Tricky",
+        "Release_Span": 1.0,
+        "Total_Sales": 2.89,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Quantum Theory",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.28,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "NHRA Drag Racing: Countdown to the Championship",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.07,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Baldur's Gate: Dark Alliance",
+        "Release_Span": 3.0,
+        "Total_Sales": 1.61,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "ESPN College Hoops 2K5",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.22,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Sakura-Sou no Pet na Kanojo",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.02,
+        "Platform_Count": 2
+    },
+    {
+        "Name": "Marvel Super Hero Squad",
+        "Release_Span": 0.0,
+        "Total_Sales": 1.3,
+        "Platform_Count": 4
+    },
+    {
+        "Name": "Petz Dogz 2",
+        "Release_Span": 0.0,
+        "Total_Sales": 2.24,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Mortal Kombat X",
+        "Release_Span": 0.0,
+        "Total_Sales": 4.1000000000000005,
+        "Platform_Count": 3
+    },
+    {
+        "Name": "Dragon's Lair 3D: Return to the Lair",
+        "Release_Span": 0.0,
+        "Total_Sales": 0.09,
+        "Platform_Count": 2
+    }
+]

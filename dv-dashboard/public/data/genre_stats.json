@@ -1,0 +1,122 @@
+[
+    {
+        "primary_genre": "Unknown",
+        "success_rate": 1.2558411214953271,
+        "median_profit": 0.0,
+        "count": 3424
+    },
+    {
+        "primary_genre": "Massively Multiplayer",
+        "success_rate": 27.906976744186046,
+        "median_profit": 0.0,
+        "count": 86
+    },
+    {
+        "primary_genre": "Free to Play",
+        "success_rate": 32.27739726027397,
+        "median_profit": 0.0,
+        "count": 1168
+    },
+    {
+        "primary_genre": "Nudity",
+        "success_rate": 32.78688524590164,
+        "median_profit": 13470.099999999999,
+        "count": 61
+    },
+    {
+        "primary_genre": "Violent",
+        "success_rate": 33.84615384615385,
+        "median_profit": 23266.88,
+        "count": 455
+    },
+    {
+        "primary_genre": "Sports",
+        "success_rate": 40.21164021164021,
+        "median_profit": 33342.119999999995,
+        "count": 189
+    },
+    {
+        "primary_genre": "Simulation",
+        "success_rate": 44.20080784766301,
+        "median_profit": 67775.33,
+        "count": 1733
+    },
+    {
+        "primary_genre": "Education",
+        "success_rate": 45.19774011299435,
+        "median_profit": 16190.055,
+        "count": 177
+    },
+    {
+        "primary_genre": "Utilities",
+        "success_rate": 46.03174603174603,
+        "median_profit": 15148.937999999998,
+        "count": 315
+    },
+    {
+        "primary_genre": "Casual",
+        "success_rate": 48.104786545924966,
+        "median_profit": 16772.8015,
+        "count": 15460
+    },
+    {
+        "primary_genre": "Design & Illustration",
+        "success_rate": 50.82872928176796,
+        "median_profit": 47716.12999999999,
+        "count": 181
+    },
+    {
+        "primary_genre": "Animation & Modeling",
+        "success_rate": 51.73410404624278,
+        "median_profit": 30724.5715,
+        "count": 346
+    },
+    {
+        "primary_genre": "Sexual Content",
+        "success_rate": 51.85185185185185,
+        "median_profit": 21328.222999999998,
+        "count": 108
+    },
+    {
+        "primary_genre": "Racing",
+        "success_rate": 52.5974025974026,
+        "median_profit": 81232.41,
+        "count": 462
+    },
+    {
+        "primary_genre": "Action",
+        "success_rate": 54.016984359726294,
+        "median_profit": 30300.809,
+        "count": 32736
+    },
+    {
+        "primary_genre": "Audio Production",
+        "success_rate": 54.74452554744526,
+        "median_profit": 34566.727999999996,
+        "count": 137
+    },
+    {
+        "primary_genre": "RPG",
+        "success_rate": 55.23114355231144,
+        "median_profit": 78388.786,
+        "count": 1233
+    },
+    {
+        "primary_genre": "Adventure",
+        "success_rate": 56.00146824911293,
+        "median_profit": 34737.003,
+        "count": 16346
+    },
+    {
+        "primary_genre": "Indie",
+        "success_rate": 56.013422818791945,
+        "median_profit": 37569.010500000004,
+        "count": 7450
+    },
+    {
+        "primary_genre": "Strategy",
+        "success_rate": 57.89007092198582,
+        "median_profit": 90416.193,
+        "count": 1128
+    }
+]

@@ -1,0 +1,38 @@
+[
+    {
+        "genre": "RPG",
+        "safety": 14,
+        "potential": 2.3,
+        "market_type": "Gold Mine"
+    },
+    {
+        "genre": "Strategy",
+        "safety": 9,
+        "potential": 1.5,
+        "market_type": "Gold Mine"
+    },
+    {
+        "genre": "Simulation",
+        "safety": 6,
+        "potential": 1.2,
+        "market_type": "Safe Bet"
+    },
+    {
+        "genre": "Action",
+        "safety": 10,
+        "potential": 6.1,
+        "market_type": "Gladiator Arena"
+    },
+    {
+        "genre": "Adventure",
+        "safety": 5,
+        "potential": 3.3,
+        "market_type": "Trap"
+    },
+    {
+        "genre": "Sports",
+        "safety": 8.5,
+        "potential": 0.6,
+        "market_type": "Niche"
+    }
+]
