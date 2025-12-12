@@ -1,0 +1,82 @@
+[
+  {
+    "Genre": "Action",
+    "Total_Traffic": 6172114,
+    "Median_Traffic": 10.0,
+    "Mean_Traffic": 2381.2168209877,
+    "Game_Count": 2592,
+    "Inequality_Ratio": 238.1216820988
+  },
+  {
+    "Genre": "Adventure",
+    "Total_Traffic": 3349765,
+    "Median_Traffic": 5.0,
+    "Mean_Traffic": 1351.2565550625,
+    "Game_Count": 2479,
+    "Inequality_Ratio": 270.2513110125
+  },
+  {
+    "Genre": "Casual",
+    "Total_Traffic": 296308,
+    "Median_Traffic": 2.0,
+    "Mean_Traffic": 152.4218106996,
+    "Game_Count": 1944,
+    "Inequality_Ratio": 76.2109053498
+  },
+  {
+    "Genre": "Education",
+    "Total_Traffic": 6326,
+    "Median_Traffic": 2.0,
+    "Mean_Traffic": 110.9824561404,
+    "Game_Count": 57,
+    "Inequality_Ratio": 55.4912280702
+  },
+  {
+    "Genre": "Massively Multiplayer",
+    "Total_Traffic": 1018066,
+    "Median_Traffic": 39.0,
+    "Mean_Traffic": 3211.5646687697,
+    "Game_Count": 317,
+    "Inequality_Ratio": 82.3478120197
+  },
+  {
+    "Genre": "RPG",
+    "Total_Traffic": 2346261,
+    "Median_Traffic": 14.0,
+    "Mean_Traffic": 1518.6155339806,
+    "Game_Count": 1545,
+    "Inequality_Ratio": 108.4725381415
+  },
+  {
+    "Genre": "Racing",
+    "Total_Traffic": 118308,
+    "Median_Traffic": 8.0,
+    "Mean_Traffic": 350.0236686391,
+    "Game_Count": 338,
+    "Inequality_Ratio": 43.7529585799
+  },
+  {
+    "Genre": "Simulation",
+    "Total_Traffic": 1286943,
+    "Median_Traffic": 6.0,
+    "Mean_Traffic": 761.9555950266,
+    "Game_Count": 1689,
+    "Inequality_Ratio": 126.9925991711
+  },
+  {
+    "Genre": "Sports",
+    "Total_Traffic": 609124,
+    "Median_Traffic": 8.5,
+    "Mean_Traffic": 1301.547008547,
+    "Game_Count": 468,
+    "Inequality_Ratio": 153.1231774761
+  },
+  {
+    "Genre": "Strategy",
+    "Total_Traffic": 1545510,
+    "Median_Traffic": 9.0,
+    "Mean_Traffic": 941.2362971985,
+    "Game_Count": 1642,
+    "Inequality_Ratio": 104.5818107998
+  }
+]

@@ -9,8 +9,9 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import {
     LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
-    AreaChart, Area, BarChart, Bar, ScatterChart, Scatter, Cell
+    AreaChart, Area, BarChart, Bar, ScatterChart, Scatter, Cell, ReferenceLine
 } from "recharts";
+import Plot from "react-plotly.js";
 import { Gamepad2, DollarSign, Users, Trophy } from "lucide-react";
 
 // --- TYPES ---
@@ -116,6 +117,14 @@ interface ProMatrix {
     potential: number;
     market_type: string;
 }
+interface GenreAnalysis {
+    Genre: string;
+    Total_Traffic: number;
+    Median_Traffic: number;
+    Mean_Traffic: number;
+    Game_Count: number;
+    Inequality_Ratio: number;
+}
 
 export default function Dashboard() {
     const [kpi, setKpi] = useState<KPIData | null>(null);
@@ -143,6 +152,7 @@ export default function Dashboard() {
     const [launchEcosystem, setLaunchEcosystem] = useState<LaunchEcosystem[]>([]);
     const [executionMultipliers, setExecutionMultipliers] = useState<ExecutionMultiplier[]>([]);
     const [proMatrix, setProMatrix] = useState<ProMatrix[]>([]);
+    const [genreAnalysis, setGenreAnalysis] = useState<GenreAnalysis[]>([]);
 
     // Derived data based on active filter
     const filteredKpis = filteredData?.kpis || [];
@@ -173,6 +183,7 @@ export default function Dashboard() {
         fetch("/data/launch_ecosystem.json").then(res => res.json()).then(setLaunchEcosystem).catch(e => console.error("LaunchEcosystem Error", e));
         fetch("/data/execution_multipliers.json").then(res => res.json()).then(setExecutionMultipliers).catch(e => console.error("Multipliers Error", e));
         fetch("/data/pro_matrix.json").then(res => res.json()).then(setProMatrix).catch(e => console.error("ProMatrix Error", e));
+        fetch("/data/genre_analysis.json").then(res => res.json()).then(setGenreAnalysis).catch(e => console.error("GenreAnalysis Error", e));
     }, []);
 
     // Compute strategy aggregations - use useMemo to recalculate when data changes
@@ -628,58 +639,214 @@ export default function Dashboard() {
                     </div>
                 </div>
 
-                {/* 4e. PRO DOMINANCE MATRIX (Zain's Research) */}
+                {/* 4e. PRO DOMINANCE MATRIX - Market Structure Matrix (Based on genre_analysis.json) */}
                 <div className="max-w-[95%] mx-auto py-20">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6 text-amber-400">Pro Strategy Matrix</h2>
-                    <p className="text-xl text-neutral-400 mb-10">For high-budget studios: Safety (median revenue floor) vs Potential (market size).</p>
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6 text-amber-400">Market Structure Matrix: Potential vs. Safety</h2>
+                    <p className="text-xl text-neutral-400 mb-10">For high-budget studios: Safety (Median Traffic) vs Potential (Total Market Traffic). Color indicates Monopoly Risk (Inequality Ratio).</p>
 
-                    <div className="bg-neutral-900/50 p-6 rounded-3xl border border-neutral-800 h-[500px]">
-                        <ResponsiveContainer width="100%" height="90%">
-                            <ScatterChart margin={{ top: 20, right: 20, bottom: 40, left: 40 }}>
-                                <CartesianGrid stroke="#333" />
-                                <XAxis
-                                    type="number" dataKey="safety" name="Safety" stroke="#888"
-                                    label={{ value: 'Safety (Median Revenue Floor)', position: 'bottom', fill: '#888' }}
+                    <div className="bg-neutral-900/50 p-6 rounded-3xl border border-neutral-800 h-[700px]">
+                        {genreAnalysis.length > 0 && (() => {
+                            // Prepare data exactly as in the notebook
+                            const xData = genreAnalysis.map(d => d.Median_Traffic);
+                            const yData = genreAnalysis.map(d => d.Total_Traffic);
+                            // Scale sizes properly - Plotly expects sizes in pixels, scale Game_Count appropriately
+                            const minSize = 10;
+                            const maxSize = 50;
+                            const minCount = Math.min(...genreAnalysis.map(d => d.Game_Count));
+                            const maxCount = Math.max(...genreAnalysis.map(d => d.Game_Count));
+                            const sizes = genreAnalysis.map(d => {
+                                if (maxCount === minCount) return (minSize + maxSize) / 2;
+                                return minSize + ((d.Game_Count - minCount) / (maxCount - minCount)) * (maxSize - minSize);
+                            });
+                            const colors = genreAnalysis.map(d => d.Inequality_Ratio);
+                            const texts = genreAnalysis.map(d => d.Genre);
+
+                            // Calculate median for reference lines (using paper coordinates)
+                            const medianSafety = genreAnalysis.reduce((sum, d) => sum + d.Median_Traffic, 0) / genreAnalysis.length;
+                            const medianPotential = genreAnalysis.reduce((sum, d) => sum + d.Total_Traffic, 0) / genreAnalysis.length;
+
+                            const plotData = [
+                                {
+                                    x: xData,
+                                    y: yData,
+                                    mode: 'markers+text',
+                                    type: 'scatter',
+                                    text: texts,
+                                    textposition: 'top center',
+                                    textfont: {
+                                        size: 11,
+                                        color: '#000'
+                                    },
+                                    marker: {
+                                        size: sizes,
+                                        color: colors,
+                                        colorscale: 'RdYlGn_r', // Red-Yellow-Green reversed
+                                        showscale: true,
+                                        colorbar: {
+                                            title: 'Monopoly Risk',
+                                            titlefont: { size: 12 },
+                                            tickfont: { size: 10 }
+                                        },
+                                        line: {
+                                            color: 'rgba(0,0,0,0.3)',
+                                            width: 1
+                                        },
+                                        opacity: 0.8,
+                                        sizemode: 'diameter'
+                                    },
+                                    customdata: genreAnalysis.map(d => [
+                                        d.Median_Traffic,
+                                        d.Total_Traffic,
+                                        d.Game_Count,
+                                        d.Inequality_Ratio.toFixed(1)
+                                    ]),
+                                    hovertemplate: 
+                                        '<b>%{text}</b><br>' +
+                                        'Median Traffic: %{customdata[0]:,}<br>' +
+                                        'Total Traffic: %{customdata[1]:,}<br>' +
+                                        'Game Count: %{customdata[2]}<br>' +
+                                        'Inequality Ratio: %{customdata[3]}<br>' +
+                                        '<extra></extra>',
+                                    name: 'Genres'
+                                }
+                            ];
+
+                            // Calculate values for annotations and reference lines
+                            const maxY = Math.max(...yData);
+                            const minY = Math.min(...yData);
+
+                            const layout = {
+                                title: {
+                                    text: '<b>RPG: Your #1 Target</b><br><i>(Highest Potential & Safest Bet for Non-Indie Games)</i>',
+                                    font: { size: 20 },
+                                    x: 0.5,
+                                    xanchor: 'center'
+                                },
+                                xaxis: {
+                                    title: {
+                                        text: 'SAFETY: Median Player Traffic (Log Scale)'
+                                    },
+                                    type: 'log'
+                                    // Let Plotly auto-scale (like px.scatter does) - no manual range
+                                },
+                                yaxis: {
+                                    title: {
+                                        text: 'POTENTIAL: Total Market Traffic (Log Scale)'
+                                    },
+                                    type: 'log'
+                                    // Let Plotly auto-scale (like px.scatter does) - no manual range
+                                },
+                                template: 'plotly_white',
+                                height: 700,
+                                width: 1000,
+                                title_font_size: 20,
+                                shapes: [
+                                    // Vertical Line (Average Safety) - using paper coordinates
+                                    {
+                                        type: 'line',
+                                        x0: medianSafety,
+                                        x1: medianSafety,
+                                        y0: 0,
+                                        y1: 1,
+                                        yref: 'paper',
+                                        line: { color: 'gray', dash: 'dash', width: 1 }
+                                    },
+                                    // Horizontal Line (Average Potential) - using paper coordinates
+                                    {
+                                        type: 'line',
+                                        x0: 0,
+                                        x1: 1,
+                                        xref: 'paper',
+                                        y0: medianPotential,
+                                        y1: medianPotential,
+                                        line: { color: 'gray', dash: 'dash', width: 1 }
+                                    }
+                                ],
+                                annotations: [
+                                    // GOLD MINE annotation - using actual values (Plotly.js handles log transform automatically)
+                                    {
+                                        x: 12,
+                                        y: maxY,
+                                        text: '<b>GOLD MINE</b><br>(High Safety, High Potential)',
+                                        showarrow: false,
+                                        font: { size: 12 }
+                                    },
+                                    // GRAVEYARD annotation - using actual values (Plotly.js handles log transform automatically)
+                                    {
+                                        x: 2,
+                                        y: minY,
+                                        text: '<b>GRAVEYARD</b><br>(Low Safety, Low Potential)',
+                                        showarrow: false,
+                                        font: { size: 12 }
+                                    }
+                                ]
+                            };
+
+                            const config = {
+                                displayModeBar: true,
+                                displaylogo: false,
+                                responsive: true,
+                                toImageButtonOptions: {
+                                    format: 'png',
+                                    filename: 'market_structure_matrix',
+                                    height: 700,
+                                    width: 1000,
+                                    scale: 2
+                                }
+                            };
+
+                            return (
+                                <Plot
+                                    data={plotData}
+                                    layout={layout}
+                                    config={config}
+                                    style={{ width: '100%', height: '100%' }}
                                 />
-                                <YAxis
-                                    type="number" dataKey="potential" name="Potential" stroke="#888"
-                                    label={{ value: 'Market Potential (Total $M)', angle: -90, position: 'insideLeft', fill: '#888' }}
-                                />
-                                <Tooltip
-                                    contentStyle={{ backgroundColor: "#1a1a1a", border: "1px solid #444", color: "#fff" }}
-                                    formatter={(value: number, name: string) => [
-                                        name === 'safety' ? `$${value}M` : `$${value}M total`,
-                                        name === 'safety' ? 'Safety Floor' : 'Market Potential'
-                                    ]}
-                                />
-                                <Scatter
-                                    name="Genres" data={proMatrix} fill="#f59e0b"
-                                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                                    shape={(props: any) => {
-                                        const { cx, cy, payload } = props;
-                                        const color = payload.market_type === 'Gold Mine' ? '#10b981'
-                                            : payload.market_type === 'Safe Bet' ? '#8b5cf6'
-                                                : payload.market_type === 'Gladiator Arena' ? '#ef4444'
-                                                    : payload.market_type === 'Trap' ? '#dc2626'
-                                                        : '#6b7280';
-                                        return (
-                                            <g>
-                                                <circle cx={cx} cy={cy} r={12} fill={color} fillOpacity={0.8} />
-                                                <text x={cx} y={cy - 16} textAnchor="middle" fill="#fff" fontSize={11}>{payload.genre}</text>
-                                            </g>
-                                        );
-                                    }}
-                                />
-                            </ScatterChart>
-                        </ResponsiveContainer>
+                            );
+                        })()}
+                        {genreAnalysis.length === 0 && (
+                            <div className="flex items-center justify-center h-full text-neutral-400">
+                                Loading chart data...
+                            </div>
+                        )}
                     </div>
 
-                    {/* Legend */}
-                    <div className="mt-4 flex justify-center gap-6 flex-wrap">
-                        <span className="flex items-center gap-2"><span className="w-4 h-4 rounded-full bg-emerald-500"></span> Gold Mine (High Safety + Potential)</span>
-                        <span className="flex items-center gap-2"><span className="w-4 h-4 rounded-full bg-purple-500"></span> Safe Bet</span>
-                        <span className="flex items-center gap-2"><span className="w-4 h-4 rounded-full bg-red-500"></span> Gladiator Arena</span>
-                        <span className="flex items-center gap-2"><span className="w-4 h-4 rounded-full bg-gray-500"></span> Niche/Trap</span>
+                    {/* Legend and Annotations */}
+                    <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="bg-neutral-900/50 p-4 rounded-xl border border-neutral-800">
+                            <h4 className="font-bold text-white mb-3">Monopoly Risk (Inequality Ratio)</h4>
+                            <div className="space-y-2 text-sm">
+                                <div className="flex items-center gap-2">
+                                    <span className="w-4 h-4 rounded-full bg-emerald-500"></span>
+                                    <span>Low Risk (&lt;50) - Fair Economy</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <span className="w-4 h-4 rounded-full bg-lime-500"></span>
+                                    <span>Medium Risk (50-100) - Moderate Inequality</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <span className="w-4 h-4 rounded-full bg-yellow-500"></span>
+                                    <span>High Risk (100-150) - Winner-Take-All</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <span className="w-4 h-4 rounded-full bg-orange-500"></span>
+                                    <span>Very High Risk (150-200) - Casino Market</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <span className="w-4 h-4 rounded-full bg-red-500"></span>
+                                    <span>Extreme Risk (&gt;200) - Monopoly Market</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="bg-neutral-900/50 p-4 rounded-xl border border-neutral-800">
+                            <h4 className="font-bold text-white mb-3">Key Insights</h4>
+                            <div className="space-y-2 text-sm text-neutral-300">
+                                <p>• <span className="text-emerald-400 font-bold">RPG/Massively Multiplayer</span>: High Safety with substantial market potential</p>
+                                <p>• <span className="text-red-400 font-bold">Action/Adventure</span>: High Total Traffic but very high Inequality (Winner-Take-All)</p>
+                                <p>• <span className="text-yellow-400 font-bold">Racing/Education</span>: Lower competition but limited market size</p>
+                                <p className="mt-3 text-xs text-neutral-500">Target genres with balanced Safety & Potential and low Inequality Ratio</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
