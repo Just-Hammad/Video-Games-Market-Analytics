@@ -661,9 +661,19 @@ export default function Dashboard() {
                             const colors = genreAnalysis.map(d => d.Inequality_Ratio);
                             const texts = genreAnalysis.map(d => d.Genre);
 
-                            // Calculate median for reference lines (using paper coordinates)
-                            const medianSafety = genreAnalysis.reduce((sum, d) => sum + d.Median_Traffic, 0) / genreAnalysis.length;
-                            const medianPotential = genreAnalysis.reduce((sum, d) => sum + d.Total_Traffic, 0) / genreAnalysis.length;
+                            // Calculate TRUE medians for reference lines (to match notebook logic)
+                            const sortedSafety = [...xData].sort((a, b) => a - b);
+                            const sortedPotential = [...yData].sort((a, b) => a - b);
+                            const medianSafety =
+                                sortedSafety.length % 2 === 1
+                                    ? sortedSafety[(sortedSafety.length - 1) / 2]
+                                    : (sortedSafety[sortedSafety.length / 2 - 1] +
+                                       sortedSafety[sortedSafety.length / 2]) / 2;
+                            const medianPotential =
+                                sortedPotential.length % 2 === 1
+                                    ? sortedPotential[(sortedPotential.length - 1) / 2]
+                                    : (sortedPotential[sortedPotential.length / 2 - 1] +
+                                       sortedPotential[sortedPotential.length / 2]) / 2;
 
                             const plotData = [
                                 {
@@ -717,7 +727,7 @@ export default function Dashboard() {
 
                             const layout = {
                                 title: {
-                                    text: '<b>RPG: Your #1 Target</b><br><i>(Highest Potential & Safest Bet for Non-Indie Games)</i>',
+                                    text: 'RPG is Your Best Bet (Potential vs. Safety)<br><sup>Bubble size = Game Count, color = Monopoly Risk</sup>',
                                     font: { size: 20 },
                                     x: 0.5,
                                     xanchor: 'center'
@@ -741,7 +751,7 @@ export default function Dashboard() {
                                 width: 1000,
                                 title_font_size: 20,
                                 shapes: [
-                                    // Vertical Line (Average Safety) - using paper coordinates
+                                    // Vertical Line (Median Safety) - using paper coordinates for y
                                     {
                                         type: 'line',
                                         x0: medianSafety,
@@ -751,7 +761,7 @@ export default function Dashboard() {
                                         yref: 'paper',
                                         line: { color: 'gray', dash: 'dash', width: 1 }
                                     },
-                                    // Horizontal Line (Average Potential) - using paper coordinates
+                                    // Horizontal Line (Median Potential) - using paper coordinates for x
                                     {
                                         type: 'line',
                                         x0: 0,
@@ -763,21 +773,29 @@ export default function Dashboard() {
                                     }
                                 ],
                                 annotations: [
-                                    // GOLD MINE annotation - using actual values (Plotly.js handles log transform automatically)
+                                    // GOLD MINE annotation (paper coordinates, like in notebook)
                                     {
-                                        x: 12,
-                                        y: maxY,
+                                        x: 0.95,
+                                        y: 0.95,
+                                        xref: 'paper',
+                                        yref: 'paper',
+                                        xanchor: 'right',
+                                        yanchor: 'top',
                                         text: '<b>GOLD MINE</b><br>(High Safety, High Potential)',
                                         showarrow: false,
-                                        font: { size: 12 }
+                                        font: { size: 12, color: 'green' }
                                     },
-                                    // GRAVEYARD annotation - using actual values (Plotly.js handles log transform automatically)
+                                    // GRAVEYARD annotation (paper coordinates, like in notebook)
                                     {
-                                        x: 2,
-                                        y: minY,
+                                        x: 0.08,
+                                        y: 0.08,
+                                        xref: 'paper',
+                                        yref: 'paper',
+                                        xanchor: 'left',
+                                        yanchor: 'bottom',
                                         text: '<b>GRAVEYARD</b><br>(Low Safety, Low Potential)',
                                         showarrow: false,
-                                        font: { size: 12 }
+                                        font: { size: 12, color: 'red' }
                                     }
                                 ]
                             };
